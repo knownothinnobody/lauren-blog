@@ -6,6 +6,7 @@ module.exports = {
   },
   pathPrefix: `/lauren-blog`,
   plugins: [
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
