@@ -1,6 +1,6 @@
 backend:
   name: github
-  branch: knownothinnobody/lauren-blog
+  repo: knownothinnobody/lauren-blog
 
 publish_mode: editorial_workflow
 
