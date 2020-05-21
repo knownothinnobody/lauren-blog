@@ -34,7 +34,7 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "deploy": "netlify deploy",
-    "link": "netlify link --name lauren-blog",
+    "link": "netlify link",
     "unlink": "netlify unlink",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
