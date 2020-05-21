@@ -9,10 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: knownothinnobody/gatsby-netlify-action@v2
+      - uses: knownothinnobody/gatsby-netlify-action@v3.1
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
-          deploy-branch: gh-pages
-          gatsby-args: --prefix-paths
