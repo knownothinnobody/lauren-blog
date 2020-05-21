@@ -9,6 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: knownothinnobody/gatsby-netlify-action@v3.1
+      - uses: knownothinnobody/gatsby-netlify-action@v3
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
