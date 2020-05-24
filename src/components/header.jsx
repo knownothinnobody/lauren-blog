@@ -1,0 +1,61 @@
+import { Link } from "gatsby"
+import React from "react"
+
+class Header extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      isOpen: "is-not-active",
+    }
+  }
+
+  toggleNavbar = () => {
+    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu
+    let active =
+      this.state.isOpen === "is-not-active" ? "is-active" : "is-not-active"
+    this.setState({
+      isOpen: active,
+    })
+    console.log(this.state)
+    this.forceUpdate()
+  }
+
+  render() {
+    return (
+      <nav
+        className="navbar is-primary"
+        role="navigation"
+        aria-label="main navigation"
+      >
+        <div className="container">
+          <div className="navbar-brand">
+            <a
+              role="button"
+              className={"navbar-burger burger " + this.state.isOpen}
+              aria-label="menu"
+              aria-expanded="false"
+              onClick={this.toggleNavbar}
+            >
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+          <div className={"navbar-menu " + this.state.isOpen}>
+            <div className="navbar-start">
+              <Link className="navbar-item" to="/">
+                Home
+              </Link>
+              <Link className="navbar-item" to="/about">
+                About
+              </Link>
+            </div>
+          </div>
+        </div>
+      </nav>
+    )
+  }
+}
+
+export default Header

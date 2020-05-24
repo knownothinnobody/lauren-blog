@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+@import "~bulma/bulma.sass";
+
+.footer.is-secondary {
+    padding-bottom: 3em
+}
+
+ul.footer-list {
+    list-style: none;
+}
+
+li.footer-list-item.footer-list-header {
+    font-weight: bold;
+}
+
+main > .container > .card.blog-post-card {
+    margin-bottom: 3em;
+}
+
+main > .container > h1.main-title {
+    margin: 0.5em 0;
+}
