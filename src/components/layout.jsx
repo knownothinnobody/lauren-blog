@@ -10,12 +10,14 @@ import PropTypes from "prop-types"
 
 import Header from "./header"
 import Footer from "./footer"
+import "../css/index.scss"
+
 
 const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <main className="page-container">{children}</main>
       <Footer />
     </>
   )
