@@ -1,6 +1,8 @@
 import { Link } from "gatsby"
 import React from "react"
 
+import image from "../images/logo.png"
+
 class Header extends React.Component {
   constructor(props) {
     super(props)
@@ -24,12 +26,15 @@ class Header extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-primary"
+        className="navbar is-fixed"
         role="navigation"
         aria-label="main navigation"
       >
         <div className="container">
           <div className="navbar-brand">
+            <Link className="navbar-item logo-image-holder" to="/">
+              <img src={image} aria-hidden="true" alt=""/>
+            </Link>
             <a
               role="button"
               className={"navbar-burger burger " + this.state.isOpen}
@@ -49,6 +54,9 @@ class Header extends React.Component {
               </Link>
               <Link className="navbar-item" to="/about">
                 About
+              </Link>
+              <Link className="navbar-item" to="contact">
+                Contact
               </Link>
             </div>
           </div>

@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Card from "../components/card"
+
 function IndexPage() {
   const data = useStaticQuery(
     graphql`
@@ -41,6 +42,30 @@ function IndexPage() {
   return (
     <Layout>
       <SEO title="Home" />
+      <section class="hero is-large is-primary is-bold">
+        <div class="hero-body">
+          <div class="container">
+            <div className="columns">
+              <div className="column">
+                <h2 class="subtitle">
+                  Featured Article
+                </h2>
+                <h1 class="title">
+                  Primary bold title
+                </h1>
+              </div>
+              <div className="column">
+                <h2 class="subtitle">
+                  Featured Article
+                </h2>
+                <h1 class="title">
+                  Primary bold title
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <div className="container">
         <h1 className="main-title is-size-1">Recent Posts</h1>
         {cards}

@@ -5,7 +5,14 @@
 $family-primary: 'Quattrocento Sans', sans-serif;
 $family-secondary: 'Work Sans', sans-serif;
 
+$primary: #2F2FA2;
+
 @import "~bulma/bulma.sass";
+
+
+$text: $grey-darker;
+$text-light: $white-ter;
+$text-strong: $black-ter;
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $family-secondary;
@@ -33,4 +40,8 @@ main > .container > h1.main-title {
 
 main.page-container {
     margin-bottom: 3em;
+}
+
+a.navbar-item.logo-image-holder {
+    width: 250px;
 }

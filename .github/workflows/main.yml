@@ -13,4 +13,4 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         with:
-          site-name: lauren-blog
+          site-name: mybluebackpack
