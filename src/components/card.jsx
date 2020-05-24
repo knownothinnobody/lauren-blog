@@ -10,7 +10,7 @@ function Card({ title, content, path, additionalClasses }) {
       <div className="card-content">
         <div className="media">
           <div className="media-content">
-            <p className="title is-4">{title}</p>
+            <h2 className="title is-4">{title}</h2>
           </div>
         </div>
 

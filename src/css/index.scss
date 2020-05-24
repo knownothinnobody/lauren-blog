@@ -1,8 +1,17 @@
 @charset "utf-8";
 
+@import url("https://fonts.googleapis.com/css2?family=Quattrocento+Sans&family=Work+Sans:wght@600&display=swap");
+
+$family-primary: 'Quattrocento Sans', sans-serif;
+$family-secondary: 'Work Sans', sans-serif;
+
 @import "~bulma/bulma.sass";
 
-.footer.is-secondary {
+h1, h2, h3, h4, h5, h6 {
+    font-family: $family-secondary;
+}
+
+.footer {
     padding-bottom: 3em
 }
 

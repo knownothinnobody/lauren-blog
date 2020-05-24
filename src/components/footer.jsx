@@ -4,7 +4,7 @@ import React from "react"
 class Footer extends React.Component {
   render() {
     return (
-      <footer className="footer is-secondary">
+      <footer className="footer">
         <div className="container">
           <div className="content columns">
             <div className="column has-text-left">
