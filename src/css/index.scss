@@ -45,3 +45,12 @@ main.page-container {
 a.navbar-item.logo-image-holder {
     width: 250px;
 }
+
+.button.feature-view-button {
+    text-transform: uppercase;
+    color: $white-ter;
+    border-color: $white-ter;
+    background-color: $primary;
+    margin: 1em 0;
+    font-weight: 600;
+}

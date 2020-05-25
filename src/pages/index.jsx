@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
@@ -91,6 +92,9 @@ function IndexPage() {
                   {featuredPost.frontmatter.title}
                 </h1>
                 <p dangerouslySetInnerHTML={createMarkup(featuredPost.excerpt)}></p>
+                <Link className="button feature-view-button" to={featuredPost.frontmatter.path}>
+                  View
+                </Link>
               </div>
               <div className="column">
                 <h2 className="subtitle">
