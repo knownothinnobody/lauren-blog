@@ -20,13 +20,14 @@ collections:
     folder: src/content/personal
     create: true
     fields:
-      - { name: linkedin-link, label: Linked Social Link }
-      - { name: facebook-link, label: Facebook Social Link }
-      - { name: twitter-link, label: Twitter Social Link }
-      - { name: github-link, label: Github Social Link }
-      - { name: medium-link, label: Medium Social Link }
-      - { name: stack-link, label: Stack Overflow Social Link }
       - { name: about-title, label: About Section Title }
       - { name: about-body, label: About Section Body, widget: markdown }
       - { name: about-title, label: Contact Section Title }
       - { name: contact-body, label: Contact Section Body, widget: markdown }
+      - { name: linkedin-link, label: Linked Social Link }
+      - { name: facebook-link, label: Facebook Social Link }
+      - { name: twitter-link, label: Twitter Social Link }
+      - { name: instagram-link, label: Instagram Social Link }
+      - { name: github-link, label: Github Social Link }
+      - { name: medium-link, label: Medium Social Link }
+      - { name: stack-link, label: Stack Overflow Social Link }
