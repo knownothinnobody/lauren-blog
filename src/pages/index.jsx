@@ -35,12 +35,11 @@ function IndexPage() {
   rows.push(
     edges.splice(0,edges.length % 3).map(({ node }) => {
       return (
-        <div className="column">
+        <div key={"slug-" + node.frontmatter.path} className="column">
           <Card
             additionalClasses="blog-post-card"
             title={node.frontmatter.title}
             path={node.frontmatter.path}
-            key={"slug-" + node.frontmatter.path}
             content={node.excerpt}
           />
         </div>
@@ -52,12 +51,11 @@ function IndexPage() {
     rows.push(
       edges.slice(i,i+chunkSize).map(({ node }) => {
         return (
-          <div className="column">
+          <div key={"slug-" + node.frontmatter.path} className="column">
             <Card
               additionalClasses="blog-post-card"
               title={node.frontmatter.title}
               path={node.frontmatter.path}
-              key={"slug-" + node.frontmatter.path}
               content={node.excerpt}
             />
           </div>
@@ -66,9 +64,12 @@ function IndexPage() {
     )
   }
 
+  let k = 0;
+
   rows = rows.map( row => {
+    k++
     return (
-      <div className="columns">
+      <div key={'row-' + k} className="columns">
         {row}
       </div>
     )
