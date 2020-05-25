@@ -24,7 +24,7 @@ collections:
     fields:
       - { name: about-title, label: About Section Title }
       - { name: about-body, label: About Section Body, widget: markdown }
-      - { name: about-title, label: Contact Section Title }
+      - { name: contact-title, label: Contact Section Title }
       - { name: contact-body, label: Contact Section Body, widget: markdown }
       - { name: linkedin-link, label: Linked Social Link }
       - { name: facebook-link, label: Facebook Social Link }
