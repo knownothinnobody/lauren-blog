@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Card from "../components/card"
+import { createMarkup } from "../utils/markup"
 
 function IndexPage() {
   const data = useStaticQuery(
@@ -26,18 +27,53 @@ function IndexPage() {
 
   let edges = data.allMarkdownRemark.edges
 
-  let cards = edges.map(edge => {
-    let post = edge.node
+  let featuredPost = edges.shift().node
+
+  let rows = []
+  let chunkSize = 3
+  
+  rows.push(
+    edges.splice(0,edges.length % 3).map(({ node }) => {
+      return (
+        <div className="column">
+          <Card
+            additionalClasses="blog-post-card"
+            title={node.frontmatter.title}
+            path={node.frontmatter.path}
+            key={"slug-" + node.frontmatter.path}
+            content={node.excerpt}
+          />
+        </div>
+      )
+    })
+  )
+
+  for (let i=0, j=edges.length; i<j; i+=chunkSize) {
+    rows.push(
+      edges.slice(i,i+chunkSize).map(({ node }) => {
+        return (
+          <div className="column">
+            <Card
+              additionalClasses="blog-post-card"
+              title={node.frontmatter.title}
+              path={node.frontmatter.path}
+              key={"slug-" + node.frontmatter.path}
+              content={node.excerpt}
+            />
+          </div>
+        )
+      })
+    )
+  }
+
+  rows = rows.map( row => {
     return (
-      <Card
-        additionalClasses="blog-post-card"
-        title={post.frontmatter.title}
-        path={post.frontmatter.path}
-        key={"slug-" + post.frontmatter.path}
-        content={post.excerpt}
-      />
+      <div className="columns">
+        {row}
+      </div>
     )
   })
+
 
   return (
     <Layout>
@@ -51,8 +87,9 @@ function IndexPage() {
                   Featured Article
                 </h2>
                 <h1 className="title">
-                  Primary bold title
+                  {featuredPost.frontmatter.title}
                 </h1>
+                <p dangerouslySetInnerHTML={createMarkup(featuredPost.excerpt)}></p>
               </div>
               <div className="column">
                 <h2 className="subtitle">
@@ -68,7 +105,7 @@ function IndexPage() {
       </section>
       <div className="container">
         <h1 className="main-title is-size-1">Recent Posts</h1>
-        {cards}
+        {rows}
       </div>
     </Layout>
   )
