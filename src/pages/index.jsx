@@ -9,14 +9,14 @@ function IndexPage() {
   const data = useStaticQuery(
     graphql`
       query {
-        allMarkdownRemark {
+        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/content/blog/"}}, sort: {order: ASC, fields: frontmatter___date}) {
           edges {
             node {
               frontmatter {
                 path
                 title
               }
-              html
+              excerpt(format: HTML)
             }
           }
         }
@@ -34,7 +34,7 @@ function IndexPage() {
         title={post.frontmatter.title}
         path={post.frontmatter.path}
         key={"slug-" + post.frontmatter.path}
-        content={post.html}
+        content={post.excerpt}
       />
     )
   })
