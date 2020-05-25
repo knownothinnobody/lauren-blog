@@ -1,17 +1,38 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "../css/index.scss"
+import { createMarkup } from "../utils/markup"
 
 function ContactPage() {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/content/personal/"}}) {
+          edges {
+            node {
+              frontmatter {
+                contactTitle
+                contactBody
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+
+  const { edges } = data.allMarkdownRemark;
+  const { frontmatter } = edges[0].node;
 
   return (
     <Layout>
       <SEO title="Contact" />
       <div className="container">
-        <h1 className="main-title is-size-1">Contact</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi quod voluptates sapiente quos fugit obcaecati vero porro dolor, sint impedit quaerat officiis id reprehenderit, dicta nam consequatur mollitia aut. Suscipit.</p>
+        <h1 className="main-title is-size-1">{frontmatter.contactTitle}</h1>
+        <div dangerouslySetInnerHTML={createMarkup(frontmatter.contactBody)}></div>
       </div>
     </Layout>
   )
