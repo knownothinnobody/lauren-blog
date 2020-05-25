@@ -1,6 +1,6 @@
 ---
-about-title: About
-about-body: >-
+aboutTitle: About
+aboutBody: >-
   Stumptown tote bag raclette, bicycle rights tbh readymade glossier semiotics.
   Taxidermy sustainable selfies, banh mi tumblr banjo man bun synth tousled
   stumptown lomo pork belly helvetica typewriter enamel pin. Kombucha wolf
@@ -20,8 +20,8 @@ about-body: >-
 
 
   Vice poke lumbersexual cred mlkshk artisan tbh chambray tacos. XOXO banjo iPhone photo booth waistcoat. 8-bit man bun taxidermy selfies, franzen VHS squid hoodie organic. Narwhal raw denim occupy, heirloom ramps try-hard fam twee keytar. Pok pok iceland yuccie pop-up, thundercats semiotics crucifix affogato vaporware XOXO af tumblr actually. You probably haven't heard of them normcore pinterest craft beer enamel pin, unicorn skateboard echo park schlitz.
-contact-title: Contact
-contact-body: >-
+contactTitle: Contact
+contactBody: >-
   Stumptown tote bag raclette, bicycle rights tbh readymade glossier semiotics.
   Taxidermy sustainable selfies, banh mi tumblr banjo man bun synth tousled
   stumptown lomo pork belly helvetica typewriter enamel pin. Kombucha wolf
@@ -41,11 +41,11 @@ contact-body: >-
 
 
   Vice poke lumbersexual cred mlkshk artisan tbh chambray tacos. XOXO banjo iPhone photo booth waistcoat. 8-bit man bun taxidermy selfies, franzen VHS squid hoodie organic. Narwhal raw denim occupy, heirloom ramps try-hard fam twee keytar. Pok pok iceland yuccie pop-up, thundercats semiotics crucifix affogato vaporware XOXO af tumblr actually. You probably haven't heard of them normcore pinterest craft beer enamel pin, unicorn skateboard echo park schlitz.
-linkedin-link: https://placeholder.com/
-facebook-link: https://placeholder.com/
-twitter-link: https://placeholder.com/
-instagram-link: https://placeholder.com/
-github-link: https://placeholder.com/
-medium-link: https://placeholder.com/
-stack-link: https://placeholder.com/
+linkedinLink: https://placeholder.com/
+facebookLink: https://placeholder.com/
+twitterLink: https://placeholder.com/
+instagramLink: https://placeholder.com/
+githubLink: https://placeholder.com/
+mediumLink: https://placeholder.com/
+stackLink: https://placeholder.com/
 ---

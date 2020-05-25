@@ -1,48 +1,77 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-class Footer extends React.Component {
-  render() {
-    let currentYear = new Date().getFullYear();
-    return (
-      <footer className="footer">
-        <div className="container">
-          <div className="content columns">
-            <div className="column has-text-left">
-              <ul className="footer-list is-marginless">
-                <li className="footer-list-item">
-                  &copy; {currentYear > 2020 ? "2020 - " + currentYear : currentYear } Lauren Ebidia
-                </li>
-              </ul>
-            </div>
-            <div className="column has-text-right">
-              <span class="icon has-text-primary">
-                <FontAwesomeIcon icon={['fab', 'linkedin']} />
-              </span>
-              <span class="icon has-text-primary">
-                <FontAwesomeIcon icon={['fab', 'facebook']} />
-              </span>
-              <span class="icon has-text-primary">
-                <FontAwesomeIcon icon={['fab', 'twitter']} />
-              </span>
-              <span class="icon has-text-primary">
-                <FontAwesomeIcon icon={['fab', 'instagram']} />
-              </span>
-              <span class="icon has-text-primary">
-                <FontAwesomeIcon icon={['fab', 'github']} />
-              </span>
-              <span class="icon has-text-primary">
-                <FontAwesomeIcon icon={['fab', 'medium']} />
-              </span>
-              <span class="icon has-text-primary">
-                <FontAwesomeIcon icon={['fab', 'stack-overflow']} />
-              </span>
-            </div>
+function Footer() {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/content/personal/"}}) {
+          edges {
+            node {
+              frontmatter {
+                linkedinLink
+                facebookLink
+                twitterLink
+                instagramLink
+                githubLink
+                mediumLink
+                stackLink
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+
+  const { edges } = data.allMarkdownRemark;
+  const { frontmatter } = edges[0].node;
+
+  const socialIcons = {
+    "linkedinLink": "linkedin",
+    "facebookLink": "facebook",
+    "twitterLink": "twitter",
+    "instagramLink": "instagram",
+    "githubLink": "github",
+    "mediumLink": "medium",
+    "stackLink": "stack-overflow"
+  }
+
+  const socialListIcons = Object.keys(socialIcons).map((socialLink) => {
+    if (frontmatter[socialLink]) {
+      return (
+        <span key={socialLink} className="icon">
+          <a className="has-text-primary" href={frontmatter[socialLink]}>
+            <FontAwesomeIcon icon={['fab', socialIcons[socialLink]]} />
+          </a>
+        </span>
+      )
+    } else {
+      return null;
+    }
+  })
+
+  let currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="footer">
+      <div className="container">
+        <div className="content columns">
+          <div className="column has-text-left">
+            <ul className="footer-list is-marginless">
+              <li className="footer-list-item">
+                &copy; {currentYear > 2020 ? "2020 - " + currentYear : currentYear } Lauren Ebidia
+              </li>
+            </ul>
+          </div>
+          <div className="column has-text-right">
+            {socialListIcons}
           </div>
         </div>
-      </footer>
-    )
-  }
+      </div>
+    </footer>
+  )
 }
 
 export default Footer

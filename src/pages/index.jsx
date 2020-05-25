@@ -42,23 +42,23 @@ function IndexPage() {
   return (
     <Layout>
       <SEO title="Home" />
-      <section class="hero is-large is-primary is-bold">
-        <div class="hero-body">
-          <div class="container">
+      <section className="hero is-large is-primary is-bold">
+        <div className="hero-body">
+          <div className="container">
             <div className="columns">
               <div className="column">
-                <h2 class="subtitle">
+                <h2 className="subtitle">
                   Featured Article
                 </h2>
-                <h1 class="title">
+                <h1 className="title">
                   Primary bold title
                 </h1>
               </div>
               <div className="column">
-                <h2 class="subtitle">
+                <h2 className="subtitle">
                   Featured Article
                 </h2>
-                <h1 class="title">
+                <h1 className="title">
                   Primary bold title
                 </h1>
               </div>
