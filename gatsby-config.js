@@ -17,8 +17,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `content`,
-        path: `${__dirname}/src/content`,
+        name: `blog-content`,
+        path: `${__dirname}/src/content/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `personal-content`,
+        path: `${__dirname}/src/content/personal`,
       },
     },
     `gatsby-plugin-netlify-cms`,
