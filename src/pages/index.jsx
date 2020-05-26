@@ -17,8 +17,12 @@ function IndexPage() {
               frontmatter {
                 path
                 title
+                posterImage
+                date(formatString: "MM/d/YYYY")
               }
-              excerpt(format: HTML)
+              fileAbsolutePath
+              timeToRead
+              excerpt(pruneLength: 500)
             }
           }
         }
@@ -42,6 +46,9 @@ function IndexPage() {
             title={node.frontmatter.title}
             path={node.frontmatter.path}
             content={node.excerpt}
+            posterImage={node.frontmatter.posterImage}
+            date={node.frontmatter.date}
+            readingTime={node.timeToRead}
           />
         </div>
       )
@@ -58,6 +65,9 @@ function IndexPage() {
               title={node.frontmatter.title}
               path={node.frontmatter.path}
               content={node.excerpt}
+              posterImage={node.frontmatter.posterImage}
+              date={node.frontmatter.date}
+              readingTime={node.timeToRead}
             />
           </div>
         )
@@ -85,24 +95,21 @@ function IndexPage() {
           <div className="container">
             <div className="columns">
               <div className="column">
-                <h2 className="subtitle">
+                <h1 className="subtitle">
                   Featured Article
-                </h2>
-                <h1 className="title">
-                  {featuredPost.frontmatter.title}
                 </h1>
+                <h2 className="title">
+                  {featuredPost.frontmatter.title}
+                </h2>
                 <p dangerouslySetInnerHTML={createMarkup(featuredPost.excerpt)}></p>
                 <Link className="button feature-view-button" to={featuredPost.frontmatter.path}>
                   View
                 </Link>
               </div>
               <div className="column">
-                <h2 className="subtitle">
-                  Featured Article
-                </h2>
-                <h1 className="title">
-                  Primary bold title
-                </h1>
+                <figure class="image featured-post-image">
+                  <img src={featuredPost.frontmatter.posterImage} />
+                </figure>
               </div>
             </div>
           </div>

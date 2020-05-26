@@ -2,6 +2,7 @@
 path: /test-4
 date: 2020-05-25T02:28:03.022Z
 title: TEST 4
+posterImage: /assets/united-nations-covid-19-response-avt0tne_ns0-unsplash.jpg
 ---
 I'm baby cronut ramps vape +1, post-ironic live-edge raw denim tumeric ugh food truck occupy. Succulents lyft tbh godard tote bag. Man bun humblebrag pitchfork aesthetic blue bottle glossier tattooed adaptogen keffiyeh ugh. Roof party +1 lomo kinfolk organic brooklyn. Edison bulb hammock waistcoat salvia sartorial.
 
