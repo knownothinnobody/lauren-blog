@@ -88,3 +88,7 @@ main > .container.blog-post h1.main-title {
 main > .container.blog-post h2.sub-title {
     margin-bottom: 1.5em;
 }
+
+.blog-post-content > p:not(:last-child) {
+    margin-bottom: 1em;
+}

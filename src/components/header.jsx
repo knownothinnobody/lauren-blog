@@ -26,7 +26,7 @@ class Header extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-fixed"
+        className="navbar is-fixed-top"
         role="navigation"
         aria-label="main navigation"
       >
