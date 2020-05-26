@@ -2,6 +2,7 @@
 path: /test-2
 date: 2020-05-22T02:20:41.149Z
 title: TEST 2
+posterImage: /assets/united-nations-covid-19-response-65z9_tx5es-unsplash.jpg
 ---
 Stumptown tote bag raclette, bicycle rights tbh readymade glossier semiotics. Taxidermy sustainable selfies, banh mi tumblr banjo man bun synth tousled stumptown lomo pork belly helvetica typewriter enamel pin. Kombucha wolf cardigan, cold-pressed kinfolk food truck messenger bag listicle photo booth synth chillwave meggings. Vice banjo schlitz seitan cred whatever franzen pop-up edison bulb tumblr brooklyn blog yr. Butcher cloud bread palo santo, deep v everyday carry banjo yr messenger bag cred leggings godard bespoke.
 
