@@ -92,3 +92,7 @@ main > .container.blog-post h2.sub-title {
 .blog-post-content > p:not(:last-child) {
     margin-bottom: 1em;
 }
+
+.hero.is-large.is-primary .hero-body {
+    padding: 5rem 1.5rem;
+}
