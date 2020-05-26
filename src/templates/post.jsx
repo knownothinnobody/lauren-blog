@@ -11,6 +11,7 @@ export default function Template({ data }) {
     <Layout>
       <div className="container blog-post">
         <h1 className="main-title is-size-1 has-text-dark">{frontmatter.title}</h1>
+        <h2 className="sub-title is-6 has-text-grey">{ frontmatter.date } &#x00B7; { markdownRemark.timeToRead } min read</h2>
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={createMarkup(html)}
@@ -21,14 +22,18 @@ export default function Template({ data }) {
 }
 
 export const pageQuery = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-        path
         title
       }
+      fields {
+        slug
+      }
+      timeToRead
+      excerpt(pruneLength: 500)
+      html
     }
   }
 `

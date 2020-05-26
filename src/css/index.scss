@@ -80,3 +80,11 @@ a.navbar-item.logo-image-holder {
 .title.is-4.card-media-title {
     margin-bottom: 0.5rem;
 }
+
+main > .container.blog-post h1.main-title {
+    margin-bottom: 0;
+}
+
+main > .container.blog-post h2.sub-title {
+    margin-bottom: 1.5em;
+}

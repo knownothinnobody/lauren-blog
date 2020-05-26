@@ -15,10 +15,12 @@ function IndexPage() {
           edges {
             node {
               frontmatter {
-                path
                 title
                 posterImage
-                date(formatString: "MM/d/YYYY")
+                date(formatString: "MMMM DD, YYYY")
+              }
+              fields {
+                slug
               }
               fileAbsolutePath
               timeToRead
@@ -40,11 +42,11 @@ function IndexPage() {
   rows.push(
     edges.splice(0,edges.length % 3).map(({ node }) => {
       return (
-        <div key={"slug-" + node.frontmatter.path} className="column">
+        <div key={node.fields.slug} className="column">
           <Card
             additionalClasses="blog-post-card"
             title={node.frontmatter.title}
-            path={node.frontmatter.path}
+            path={node.fields.slug}
             content={node.excerpt}
             posterImage={node.frontmatter.posterImage}
             date={node.frontmatter.date}
@@ -59,11 +61,11 @@ function IndexPage() {
     rows.push(
       edges.slice(i,i+chunkSize).map(({ node }) => {
         return (
-          <div key={"slug-" + node.frontmatter.path} className="column">
+          <div key={node.fields.slug} className="column">
             <Card
               additionalClasses="blog-post-card"
               title={node.frontmatter.title}
-              path={node.frontmatter.path}
+              path={node.fields.slug}
               content={node.excerpt}
               posterImage={node.frontmatter.posterImage}
               date={node.frontmatter.date}
@@ -102,7 +104,7 @@ function IndexPage() {
                   {featuredPost.frontmatter.title}
                 </h2>
                 <p dangerouslySetInnerHTML={createMarkup(featuredPost.excerpt)}></p>
-                <Link className="button feature-view-button" to={featuredPost.frontmatter.path}>
+                <Link className="button feature-view-button" to={featuredPost.fields.slug}>
                   View
                 </Link>
               </div>

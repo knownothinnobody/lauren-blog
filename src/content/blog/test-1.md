@@ -1,5 +1,4 @@
 ---
-path: /test-1
 date: 2020-05-22T02:20:41.149Z
 title: TEST 1
 posterImage: /assets/united-nations-covid-19-response-ejrk0j8jr7u-unsplash.jpg

@@ -1,3 +1,4 @@
+
 /**
  * Implement Gatsby's Node APIs in this file.
  *
@@ -7,6 +8,21 @@
 // You can delete this file if you're not using it
 
 const path = require(`path`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
+
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  let reg = new RegExp('/content/blog/')
+  if (node.internal.type === `MarkdownRemark` && reg.test(node.fileAbsolutePath)) {
+    const slug = '/blog' + createFilePath({ node, getNode, basePath: `blog` })
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug,
+    })
+  }
+}
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
@@ -16,8 +32,8 @@ exports.createPages = async ({ actions, graphql }) => {
       allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/content/blog/"}}) {
         edges {
           node {
-            frontmatter {
-              path
+            fields {
+              slug
             }
           }
         }
@@ -30,8 +46,11 @@ exports.createPages = async ({ actions, graphql }) => {
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
-      path: node.frontmatter.path,
+      path: node.fields.slug,
       component: path.resolve(`src/templates/post.jsx`),
+      context: {
+        slug: node.fields.slug,
+      }
     })
   })
 }
