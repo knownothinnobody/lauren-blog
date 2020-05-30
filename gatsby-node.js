@@ -1,4 +1,3 @@
-
 /**
  * Implement Gatsby's Node APIs in this file.
  *
@@ -10,12 +9,14 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
-  let reg = new RegExp('/content/blog/')
-  if (node.internal.type === `MarkdownRemark` && reg.test(node.fileAbsolutePath)) {
-    const slug = '/blog' + createFilePath({ node, getNode, basePath: `blog` })
+  let reg = new RegExp("/content/blog/")
+  if (
+    node.internal.type === `MarkdownRemark` &&
+    reg.test(node.fileAbsolutePath)
+  ) {
+    const slug = "/blog" + createFilePath({ node, getNode, basePath: `blog` })
     createNodeField({
       node,
       name: `slug`,
@@ -29,7 +30,9 @@ exports.createPages = async ({ actions, graphql }) => {
 
   const result = await graphql(`
     {
-      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/content/blog/"}}) {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/content/blog/" } }
+      ) {
         edges {
           node {
             fields {
@@ -50,7 +53,7 @@ exports.createPages = async ({ actions, graphql }) => {
       component: path.resolve(`src/templates/post.jsx`),
       context: {
         slug: node.fields.slug,
-      }
+      },
     })
   })
 }

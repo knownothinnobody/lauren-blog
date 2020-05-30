@@ -9,7 +9,9 @@ function ContactPage() {
   const data = useStaticQuery(
     graphql`
       query {
-        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/content/personal/"}}) {
+        allMarkdownRemark(
+          filter: { fileAbsolutePath: { regex: "/content/personal/" } }
+        ) {
           edges {
             node {
               frontmatter {
@@ -23,8 +25,71 @@ function ContactPage() {
     `
   )
 
-  const { edges } = data.allMarkdownRemark;
-  const { frontmatter } = edges[0].node;
+  const handleFormValidation = () => {
+    const nameInput = document.getElementById("name-input")
+    const emailInput = document.getElementById("email-input")
+    const messageInput = document.getElementById("message-input")
+
+    const emailRegex = new RegExp(
+      "^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$"
+    )
+
+    if (nameInput.getAttribute("dirty")) {
+      if (nameInput.value) {
+        nameInput.classList.add("is-success")
+        nameInput.classList.remove("is-danger")
+      } else {
+        nameInput.classList.add("is-danger")
+        nameInput.classList.remove("is-success")
+      }
+    } else {
+      nameInput.classList.remove("is-danger")
+      nameInput.classList.remove("is-success")
+    }
+
+    if (emailInput.getAttribute("dirty")) {
+      if (emailRegex.test(emailInput.value)) {
+        emailInput.classList.add("is-success")
+        emailInput.classList.remove("is-danger")
+      } else {
+        emailInput.classList.add("is-danger")
+        emailInput.classList.remove("is-success")
+      }
+    } else {
+      emailInput.classList.remove("is-danger")
+      emailInput.classList.remove("is-success")
+    }
+    if (messageInput.getAttribute("dirty")) {
+      if (messageInput.value) {
+        messageInput.classList.add("is-success")
+        messageInput.classList.remove("is-danger")
+      } else {
+        messageInput.classList.add("is-danger")
+        messageInput.classList.remove("is-success")
+      }
+    } else {
+      messageInput.classList.remove("is-danger")
+      messageInput.classList.remove("is-success")
+    }
+  }
+
+  const handleFormClear = e => {
+    e.preventDefault()
+    const form = document.getElementById("contact-form")
+    const inputs = [].slice.call(form.getElementsByClassName("input"))
+
+    form.reset()
+    inputs.forEach(element => {
+      element.removeAttribute("dirty")
+    })
+  }
+
+  const handleInputDirty = e => {
+    e.target.setAttribute("dirty", "true")
+  }
+
+  const { edges } = data.allMarkdownRemark
+  const { frontmatter } = edges[0].node
 
   return (
     <Layout>
@@ -33,37 +98,78 @@ function ContactPage() {
         <h1 className="main-title is-size-1">{frontmatter.contactTitle}</h1>
         <div className="columns">
           <div className="column">
-            <div dangerouslySetInnerHTML={createMarkup(frontmatter.contactBody)}></div>
+            <div
+              dangerouslySetInnerHTML={createMarkup(frontmatter.contactBody)}
+            ></div>
           </div>
           <div className="column">
-            <form action="">
+            <form
+              id="contact-form"
+              netlify-honeypot="bot-field"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              data-netlify-recaptcha="true"
+              onChange={handleFormValidation}
+            >
+              <input type="hidden" name="bot-field" />
               <div className="field">
                 <label className="label">Name</label>
                 <div className="control">
-                  <input className="input" type="text" placeholder="Text input" />
+                  <input
+                    id="name-input"
+                    className="input"
+                    type="text"
+                    placeholder="Name"
+                    onChange={handleInputDirty}
+                    required
+                  />
                 </div>
               </div>
 
               <div className="field">
                 <label className="label">Email</label>
                 <div className="control">
-                  <input className="input" type="email" placeholder="Email input" />
+                  <input
+                    className="input"
+                    type="email"
+                    id="email-input"
+                    placeholder="Email"
+                    onChange={handleInputDirty}
+                    required
+                  />
                 </div>
               </div>
 
               <div className="field">
                 <label className="label">Message</label>
                 <div className="control">
-                  <textarea className="textarea" placeholder="Message"></textarea>
+                  <textarea
+                    className="textarea input"
+                    id="message-input"
+                    placeholder="Message"
+                    onChange={handleInputDirty}
+                    required
+                  ></textarea>
                 </div>
               </div>
 
               <div className="field is-grouped">
+                <div data-netlify-recaptcha="true"></div>
                 <div className="control">
-                  <button className="button is-link">Submit</button>
+                  <input
+                    type="submit"
+                    className="button is-link"
+                    value="Submit"
+                  />
                 </div>
                 <div className="control">
-                  <button className="button is-link is-light">Cancel</button>
+                  <button
+                    className="button is-link is-light"
+                    onClick={handleFormClear}
+                  >
+                    Cancel
+                  </button>
                 </div>
               </div>
             </form>

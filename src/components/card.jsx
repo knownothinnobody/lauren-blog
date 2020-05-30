@@ -4,19 +4,29 @@ import PropTypes from "prop-types"
 
 import { createMarkup } from "../utils/markup"
 
-function Card({ title, content, path, posterImage, date, readingTime, additionalClasses }) {
+function Card({
+  title,
+  content,
+  path,
+  posterImage,
+  date,
+  readingTime,
+  additionalClasses,
+}) {
   return (
     <div className={"card " + additionalClasses}>
       <div className="card-image">
         <figure className="image card-image-wrapper">
-          <img src={ posterImage } alt="" aria-hidden="true" />
+          <img src={posterImage} alt="" aria-hidden="true" />
         </figure>
       </div>
       <div className="card-content">
         <div className="media">
           <div className="media-content">
             <h2 className="title is-4 card-media-title">{title}</h2>
-            <h3 className="title is-6 has-text-grey">{ date } &#x00B7; { readingTime } min read</h3>
+            <h3 className="title is-6 has-text-grey">
+              {date} &#x00B7; {readingTime} min read
+            </h3>
           </div>
         </div>
 

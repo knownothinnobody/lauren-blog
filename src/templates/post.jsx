@@ -10,8 +10,12 @@ export default function Template({ data }) {
   return (
     <Layout>
       <div className="container blog-post">
-        <h1 className="main-title is-size-1 has-text-dark">{frontmatter.title}</h1>
-        <h2 className="sub-title is-6 has-text-grey">{ frontmatter.date } &#x00B7; { markdownRemark.timeToRead } min read</h2>
+        <h1 className="main-title is-size-1 has-text-dark">
+          {frontmatter.title}
+        </h1>
+        <h2 className="sub-title is-6 has-text-grey">
+          {frontmatter.date} &#x00B7; {markdownRemark.timeToRead} min read
+        </h2>
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={createMarkup(html)}

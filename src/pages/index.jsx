@@ -11,7 +11,10 @@ function IndexPage() {
   const data = useStaticQuery(
     graphql`
       query {
-        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/content/blog/"}}, sort: {order: ASC, fields: frontmatter___date}) {
+        allMarkdownRemark(
+          filter: { fileAbsolutePath: { regex: "/content/blog/" } }
+          sort: { order: ASC, fields: frontmatter___date }
+        ) {
           edges {
             node {
               frontmatter {
@@ -38,9 +41,9 @@ function IndexPage() {
 
   let rows = []
   let chunkSize = 3
-  
+
   rows.push(
-    edges.splice(0,edges.length % 3).map(({ node }) => {
+    edges.splice(0, edges.length % 3).map(({ node }) => {
       return (
         <div key={node.fields.slug} className="column">
           <Card
@@ -57,9 +60,9 @@ function IndexPage() {
     })
   )
 
-  for (let i=0, j=edges.length; i<j; i+=chunkSize) {
+  for (let i = 0, j = edges.length; i < j; i += chunkSize) {
     rows.push(
-      edges.slice(i,i+chunkSize).map(({ node }) => {
+      edges.slice(i, i + chunkSize).map(({ node }) => {
         return (
           <div key={node.fields.slug} className="column">
             <Card
@@ -77,17 +80,16 @@ function IndexPage() {
     )
   }
 
-  let k = 0;
+  let k = 0
 
-  rows = rows.map( row => {
+  rows = rows.map(row => {
     k++
     return (
-      <div key={'row-' + k} className="columns">
+      <div key={"row-" + k} className="columns">
         {row}
       </div>
     )
   })
-
 
   return (
     <Layout>
@@ -97,14 +99,15 @@ function IndexPage() {
           <div className="container">
             <div className="columns">
               <div className="column">
-                <h1 className="subtitle">
-                  Featured Article
-                </h1>
-                <h2 className="title">
-                  {featuredPost.frontmatter.title}
-                </h2>
-                <p dangerouslySetInnerHTML={createMarkup(featuredPost.excerpt)}></p>
-                <Link className="button feature-view-button" to={featuredPost.fields.slug}>
+                <h1 className="subtitle">Featured Article</h1>
+                <h2 className="title">{featuredPost.frontmatter.title}</h2>
+                <p
+                  dangerouslySetInnerHTML={createMarkup(featuredPost.excerpt)}
+                ></p>
+                <Link
+                  className="button feature-view-button"
+                  to={featuredPost.fields.slug}
+                >
                   View
                 </Link>
               </div>

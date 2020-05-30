@@ -9,7 +9,9 @@ function AboutPage() {
   const data = useStaticQuery(
     graphql`
       query {
-        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/content/personal/"}}) {
+        allMarkdownRemark(
+          filter: { fileAbsolutePath: { regex: "/content/personal/" } }
+        ) {
           edges {
             node {
               frontmatter {
@@ -23,15 +25,17 @@ function AboutPage() {
     `
   )
 
-  const { edges } = data.allMarkdownRemark;
-  const { frontmatter } = edges[0].node;
+  const { edges } = data.allMarkdownRemark
+  const { frontmatter } = edges[0].node
 
   return (
     <Layout>
       <SEO title="About" />
       <div className="container">
         <h1 className="main-title is-size-1">{frontmatter.aboutTitle}</h1>
-        <div dangerouslySetInnerHTML={createMarkup(frontmatter.aboutBody)}></div>
+        <div
+          dangerouslySetInnerHTML={createMarkup(frontmatter.aboutBody)}
+        ></div>
       </div>
     </Layout>
   )

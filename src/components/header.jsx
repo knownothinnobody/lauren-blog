@@ -33,7 +33,7 @@ class Header extends React.Component {
         <div className="container">
           <div className="navbar-brand">
             <Link className="navbar-item logo-image-holder" to="/">
-              <img src={image} aria-hidden="true" alt=""/>
+              <img src={image} aria-hidden="true" alt="" />
             </Link>
             <a
               role="button"
