@@ -105,14 +105,11 @@ function ContactPage() {
           <div className="column">
             <form
               id="contact-form"
-              netlify-honeypot="bot-field"
               name="contact"
               method="POST"
               data-netlify="true"
-              data-netlify-recaptcha="true"
               onChange={handleFormValidation}
             >
-              <input type="hidden" name="bot-field" />
               <input type="hidden" name="form-name" value="contact" />
               <div className="field">
                 <label className="label">Name</label>
