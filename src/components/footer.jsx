@@ -60,7 +60,7 @@ function Footer() {
     <footer className="footer">
       <div className="container">
         <div className="content columns">
-          <div className="column has-text-left">
+          <div className="column has-text-left copyright-column">
             <ul className="footer-list is-marginless">
               <li className="footer-list-item">
                 &copy;{" "}
@@ -69,7 +69,7 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div className="column has-text-right">{socialListIcons}</div>
+          <div className="column has-text-right social-links-column">{socialListIcons}</div>
         </div>
       </div>
     </footer>

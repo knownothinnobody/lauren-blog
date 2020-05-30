@@ -31,7 +31,7 @@ function AboutPage() {
   return (
     <Layout>
       <SEO title="About" />
-      <div className="container">
+      <div className="container is-fluid">
         <h1 className="main-title is-size-1">{frontmatter.aboutTitle}</h1>
         <div
           dangerouslySetInnerHTML={createMarkup(frontmatter.aboutBody)}

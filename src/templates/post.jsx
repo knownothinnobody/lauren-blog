@@ -9,7 +9,7 @@ export default function Template({ data }) {
   const { frontmatter, html } = markdownRemark
   return (
     <Layout>
-      <div className="container blog-post">
+      <div className="container blog-post is-fluid">
         <h1 className="main-title is-size-1 has-text-dark">
           {frontmatter.title}
         </h1>

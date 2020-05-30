@@ -43,7 +43,7 @@ main.page-container {
 }
 
 a.navbar-item.logo-image-holder {
-    width: 250px;
+    max-width: 250px;
 }
 
 .button.feature-view-button {
@@ -99,4 +99,20 @@ main > .container.blog-post h2.sub-title {
 
 .page-container {
     min-height: 100vh;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar-burger.burger {
+        position: fixed;
+        right: 0.75rem;
+    }
+
+    .featured-post-image {
+        display: none;
+    }
+
+     .copyright-column,
+     .social-links-column {
+        text-align: center !important;
+     }   
 }
