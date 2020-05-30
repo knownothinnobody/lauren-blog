@@ -113,6 +113,7 @@ function ContactPage() {
               onChange={handleFormValidation}
             >
               <input type="hidden" name="bot-field" />
+              <input type="hidden" name="form-name" value="contact" />
               <div className="field">
                 <label className="label">Name</label>
                 <div className="control">
