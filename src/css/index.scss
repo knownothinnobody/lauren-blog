@@ -114,5 +114,14 @@ main > .container.blog-post h2.sub-title {
      .copyright-column,
      .social-links-column {
         text-align: center !important;
-     }   
+     }
+}
+
+@media only screen and (max-width: 1024px) {
+    .page-container > .container {
+        max-width: none;
+       padding-left: 32px;
+       padding-right: 32px;
+       width: 100%;
+   }
 }
