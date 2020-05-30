@@ -108,9 +108,13 @@ function ContactPage() {
               name="contact"
               method="POST"
               data-netlify="true"
+              netlify-honeypot="bot-field"
               onChange={handleFormValidation}
             >
               <input type="hidden" name="form-name" value="contact" />
+              <p class="is-hidden">
+                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+              </p>
               <div className="field">
                 <label for="name-input" className="label">
                   Name
