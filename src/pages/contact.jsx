@@ -162,7 +162,6 @@ function ContactPage() {
               </div>
 
               <div className="field is-grouped">
-                <div data-netlify-recaptcha="true"></div>
                 <div className="control">
                   <input
                     type="submit"
