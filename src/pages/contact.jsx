@@ -112,12 +112,15 @@ function ContactPage() {
             >
               <input type="hidden" name="form-name" value="contact" />
               <div className="field">
-                <label className="label">Name</label>
+                <label for="name-input" className="label">
+                  Name
+                </label>
                 <div className="control">
                   <input
                     id="name-input"
                     className="input"
                     type="text"
+                    name="name"
                     placeholder="Name"
                     onChange={handleInputDirty}
                     required
@@ -126,12 +129,15 @@ function ContactPage() {
               </div>
 
               <div className="field">
-                <label className="label">Email</label>
+                <label for="email-input" className="label">
+                  Email
+                </label>
                 <div className="control">
                   <input
                     className="input"
                     type="email"
                     id="email-input"
+                    name="email"
                     placeholder="Email"
                     onChange={handleInputDirty}
                     required
@@ -140,12 +146,15 @@ function ContactPage() {
               </div>
 
               <div className="field">
-                <label className="label">Message</label>
+                <label for="message-input" className="label">
+                  Message
+                </label>
                 <div className="control">
                   <textarea
                     className="textarea input"
                     id="message-input"
                     placeholder="Message"
+                    name="message"
                     onChange={handleInputDirty}
                     required
                   ></textarea>

@@ -113,7 +113,7 @@ function IndexPage() {
               </div>
               <div className="column">
                 <figure class="image featured-post-image">
-                  <img src={featuredPost.frontmatter.posterImage} />
+                  <img src={featuredPost.frontmatter.posterImage} alt=""/>
                 </figure>
               </div>
             </div>
