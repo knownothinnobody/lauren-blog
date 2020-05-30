@@ -54,7 +54,7 @@ module.exports = {
       resolve: "gatsby-plugin-ackee-tracker",
       options: {
         domainId: 'bd98d847-d029-42cd-8a97-d5373d5c8e29',
-        server: 'http://knownothinackee.herokuapp.com',
+        server: 'https://knownothinackee.herokuapp.com',
         ignoreLocalhost: true,
         detailed: true
       },
