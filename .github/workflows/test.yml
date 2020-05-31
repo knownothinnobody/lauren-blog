@@ -21,7 +21,7 @@ jobs:
 
       - name: Install Dependencies
         if: steps.cache-primes.outputs.cache-hit != true
-        run: NODE_ENV=development npm ci
+        run: NODE_ENV=development npm i
 
       - name: Lint Code
         run: npm run lint
