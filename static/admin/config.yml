@@ -10,10 +10,26 @@ public_folder: /assets
 collections:
   - name: blog
     label: Blog
-    folder: blog
+    folder: src/content/blog
     create: true
     fields:
-      - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
+      - { name: posterImage, label: Poster Image, widget: file}
+  - name: personal
+    label: Personal
+    folder: src/content/personal
+    create: true
+    fields:
+      - { name: aboutTitle, label: About Section Title }
+      - { name: aboutBody, label: About Section Body, widget: markdown }
+      - { name: contactTitle, label: Contact Section Title }
+      - { name: contactBody, label: Contact Section Body, widget: markdown }
+      - { name: linkedinLink, label: Linked Social Link }
+      - { name: facebookLink, label: Facebook Social Link }
+      - { name: twitterLink, label: Twitter Social Link }
+      - { name: instagramLink, label: Instagram Social Link }
+      - { name: githubLink, label: Github Social Link }
+      - { name: mediumLink, label: Medium Social Link }
+      - { name: stackLink, label: Stack Overflow Social Link }

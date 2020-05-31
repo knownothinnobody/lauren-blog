@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Quattrocento+Sans&family=Work+Sans:wght@600&display=swap");
+
+$family-primary: 'Quattrocento Sans', sans-serif;
+$family-secondary: 'Work Sans', sans-serif;
+
+$primary: #2F2FA2;
+
+@import "~bulma/bulma.sass";
+
+
+$text: $grey-darker;
+$text-light: $white-ter;
+$text-strong: $black-ter;
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $family-secondary;
+}
+
+.footer {
+    padding-bottom: 3em
+}
+
+ul.footer-list {
+    list-style: none;
+}
+
+li.footer-list-item.footer-list-header {
+    font-weight: bold;
+}
+
+main > .container > .card.blog-post-card {
+    margin-bottom: 3em;
+}
+
+main > .container > h1.main-title {
+    margin: 0.5em 0;
+}
+
+main.page-container {
+    margin-bottom: 3em;
+}
+
+a.navbar-item.logo-image-holder {
+    max-width: 250px;
+}
+
+.button.feature-view-button {
+    text-transform: uppercase;
+    color: $white-ter;
+    border-color: $white-ter;
+    background-color: $primary;
+    margin: 1em 0;
+    font-weight: 600;
+}
+
+.card-image-wrapper {
+    height: 25vh;
+    overflow: hidden;
+}
+
+.card-image-wrapper > img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.featured-post-image {
+    height: 30vh;
+    overflow: hidden;
+}
+
+.featured-post-image {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.title.is-4.card-media-title {
+    margin-bottom: 0.5rem;
+}
+
+main > .container.blog-post h1.main-title {
+    margin-bottom: 0;
+}
+
+main > .container.blog-post h2.sub-title {
+    margin-bottom: 1.5em;
+}
+
+.blog-post-content > p:not(:last-child) {
+    margin-bottom: 1em;
+}
+
+.hero.is-large.is-primary .hero-body {
+    padding: 5rem 1.5rem;
+}
+
+.page-container {
+    min-height: 100vh;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar-burger.burger {
+        position: fixed;
+        right: 0.75rem;
+    }
+
+    .featured-post-image {
+        display: none;
+    }
+
+     .copyright-column,
+     .social-links-column {
+        text-align: center !important;
+     }
+}
+
+@media only screen and (max-width: 1024px) {
+    .page-container > .container {
+        max-width: none;
+       padding-left: 32px;
+       padding-right: 32px;
+       width: 100%;
+   }
+}

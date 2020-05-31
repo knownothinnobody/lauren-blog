@@ -1,0 +1,23 @@
+name: Gatsby Netlify Publish
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Cache Gatsby Files
+        uses: actions/cache@v2
+        with:
+          path: |
+            ./.cache
+            ./public
+          key: ${{ runner.os }}
+      - uses: knownothinnobody/gatsby-netlify-action@v3.1.8
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        with:
+          site-name: mybluebackpack
