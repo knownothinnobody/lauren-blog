@@ -113,7 +113,10 @@ function ContactPage() {
             >
               <input type="hidden" name="form-name" value="contact" />
               <p class="is-hidden">
-                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                <label>
+                  Don’t fill this out if you're human:{" "}
+                  <input name="bot-field" />
+                </label>
               </p>
               <div className="field">
                 <label for="name-input" className="label">

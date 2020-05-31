@@ -69,7 +69,9 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div className="column has-text-right social-links-column">{socialListIcons}</div>
+          <div className="column has-text-right social-links-column">
+            {socialListIcons}
+          </div>
         </div>
       </div>
     </footer>

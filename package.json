@@ -41,6 +41,7 @@
     "typography-theme-fairy-gates": "^0.16.19"
   },
   "devDependencies": {
+    "husky": "^4.2.5",
     "prettier": "2.0.5"
   },
   "keywords": [
@@ -58,6 +59,12 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format && git add .",
+      "pre-push": "npm audit"
+    }
   },
   "repository": {
     "type": "git",

@@ -3,7 +3,7 @@ module.exports = {
     title: `MyBlueBackpack`,
     description: `Welcome to MyBlueBackpack.`,
     author: `Lauren Ebidia`,
-    siteUrl: `https://mybluebackpack.netlify.app`
+    siteUrl: `https://mybluebackpack.netlify.app`,
   },
   plugins: [
     `gatsby-plugin-sass`,
