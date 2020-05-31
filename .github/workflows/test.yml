@@ -2,8 +2,6 @@ name: Lint and Test Code
 
 on:
   push:
-    branches:
-      - *
     branches-ignore:
       - cms/**/*
 
