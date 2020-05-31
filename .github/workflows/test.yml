@@ -1,0 +1,28 @@
+name: Lint and Test Code
+
+on:
+  push:
+    branches:
+      - *
+    branches-ignore:
+      - cms/**/*
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Lint Code
+        run: npm run lint
+      - name: Cache Node Modules
+        uses: actions/cache@v2
+        with:
+          path: |
+            ./node_modules
+          key: ${{ runner.os }}-${{ hashFiles('./package-lock.json') }}
+      - name: Install Dependencies
+        run: NODE_ENV=development npm ci
+      - name: Run Unit Tests
+        run: npm run test -- --coverage
+      - name: Run Integration Tests
+        run: npm run test:e2e:ci

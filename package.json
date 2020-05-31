@@ -80,7 +80,7 @@
     "unlink": "netlify unlink",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "lint": "eslint ./src/**/*.{js,jsx} --fix",
+    "lint": "eslint ./src/**/*.{js,jsx}",
     "test": "jest",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
@@ -90,8 +90,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run format && npm run lint && git add .",
-      "pre-push": "npm audit && npm run test && npm run test:e2e:ci"
+      "pre-commit": "npm run format && npm run lint -- --fix && git add .",
+      "pre-push": "npm run test"
     }
   },
   "repository": {

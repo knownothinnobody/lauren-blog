@@ -1,0 +1,13 @@
+name: Security Tests
+
+on:
+  schedule:
+  - cron: 0 9 * * 1
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: SCA - Run NPM Audit
+        run: npm audit
