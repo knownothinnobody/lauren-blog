@@ -18,6 +18,7 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('./package-lock.json') }}
       - run: NODE_ENV=development npm ci
       - run: npm run test
+      - run: npm run test:e2e:ci
       - name: Cache Gatsby Files
         uses: actions/cache@v2
         with:

@@ -41,8 +41,13 @@
     "typography-theme-fairy-gates": "^0.16.19"
   },
   "devDependencies": {
+    "@testing-library/cypress": "^6.0.0",
+    "@testing-library/react": "^10.0.4",
+    "axe-core": "^3.5.4",
     "babel-jest": "^26.0.1",
     "babel-preset-gatsby": "^0.4.7",
+    "cypress": "^4.7.0",
+    "cypress-axe": "^0.8.1",
     "eslint": "^7.1.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-config-standard": "^14.1.1",
@@ -55,7 +60,8 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.0.1",
     "prettier": "2.0.5",
-    "react-test-renderer": "^16.13.1"
+    "react-test-renderer": "^16.13.1",
+    "start-server-and-test": "^1.11.0"
   },
   "keywords": [
     "gatsby"
@@ -72,12 +78,16 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "lint": "eslint ./src/**/*.{js,jsx} --fix",
-    "test": "jest"
+    "test": "jest",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
+    "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run"
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm run format && npm run lint && git add .",
-      "pre-push": "npm audit && npm run test"
+      "pre-push": "npm audit && npm run test && npm run test:e2e:ci"
     }
   },
   "repository": {

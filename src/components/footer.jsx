@@ -46,6 +46,7 @@ function Footer () {
         <span key={socialLink} className="icon">
           <a className="has-text-primary" href={frontmatter[socialLink]}>
             <FontAwesomeIcon icon={['fab', socialIcons[socialLink]]} />
+            <span className="is-sr-only">{socialIcons[socialLink]}</span>
           </a>
         </span>
       )

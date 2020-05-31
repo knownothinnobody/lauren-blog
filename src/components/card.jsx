@@ -24,7 +24,7 @@ function Card ({
         <div className="media">
           <div className="media-content">
             <h2 className="title is-4 card-media-title">{title}</h2>
-            <h3 className="title is-6 has-text-grey">
+            <h3 className="title is-6 has-text-grey-darker">
               {date} &#x00B7; {readingTime} min read
             </h3>
           </div>
@@ -51,7 +51,7 @@ Card.propTypes = {
   additionalClasses: PropTypes.string,
   posterImage: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
-  readingTime: PropTypes.string.isRequired
+  readingTime: PropTypes.number.isRequired
 }
 
 export default Card
