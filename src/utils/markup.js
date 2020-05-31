@@ -1,5 +1,5 @@
-export function createMarkup(html) {
+export function createMarkup (html) {
   return {
-    __html: html,
+    __html: html
   }
 }

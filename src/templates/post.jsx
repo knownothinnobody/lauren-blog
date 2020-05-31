@@ -1,10 +1,11 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 
-import Layout from "../components/layout"
-import { createMarkup } from "../utils/markup"
+import Layout from '../components/layout'
+import { createMarkup } from '../utils/markup'
 
-export default function Template({ data }) {
+export default function Template ({ data }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   return (
@@ -41,3 +42,15 @@ export const pageQuery = graphql`
     }
   }
 `
+Template.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        date: PropTypes.string.isRequired
+      }).isRequired,
+      html: PropTypes.node.isRequired,
+      timeToRead: PropTypes.number.isRequired
+    }).isRequired
+  }).isRequired
+}

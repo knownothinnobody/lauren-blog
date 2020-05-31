@@ -1,20 +1,20 @@
-import { Link } from "gatsby"
-import React from "react"
-import PropTypes from "prop-types"
+import { Link } from 'gatsby'
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import { createMarkup } from "../utils/markup"
+import { createMarkup } from '../utils/markup'
 
-function Card({
+function Card ({
   title,
   content,
   path,
   posterImage,
   date,
   readingTime,
-  additionalClasses,
+  additionalClasses
 }) {
   return (
-    <div className={"card " + additionalClasses}>
+    <div className={'card ' + additionalClasses}>
       <div className="card-image">
         <figure className="image card-image-wrapper">
           <img src={posterImage} alt="" aria-hidden="true" />
@@ -51,7 +51,7 @@ Card.propTypes = {
   additionalClasses: PropTypes.string,
   posterImage: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
-  readingTime: PropTypes.string.isRequired,
+  readingTime: PropTypes.string.isRequired
 }
 
 export default Card

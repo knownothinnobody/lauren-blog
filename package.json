@@ -41,8 +41,21 @@
     "typography-theme-fairy-gates": "^0.16.19"
   },
   "devDependencies": {
+    "babel-jest": "^26.0.1",
+    "babel-preset-gatsby": "^0.4.7",
+    "eslint": "^7.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-standard": "^4.0.1",
     "husky": "^4.2.5",
-    "prettier": "2.0.5"
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.0.1",
+    "prettier": "2.0.5",
+    "react-test-renderer": "^16.13.1"
   },
   "keywords": [
     "gatsby"
@@ -58,11 +71,12 @@
     "unlink": "netlify unlink",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "lint": "eslint ./src/**/*.{js,jsx} --fix",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run format && git add .",
+      "pre-commit": "npm run format && npm run lint && git add .",
       "pre-push": "npm audit"
     }
   },

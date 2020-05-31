@@ -1,11 +1,11 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { createMarkup } from "../utils/markup"
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import { createMarkup } from '../utils/markup'
 
-function AboutPage() {
+function AboutPage () {
   const data = useStaticQuery(
     graphql`
       query {

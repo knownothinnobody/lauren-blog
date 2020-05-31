@@ -1,13 +1,12 @@
-import React from "react"
-import { Link } from "gatsby"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Card from "../components/card"
-import { createMarkup } from "../utils/markup"
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import Card from '../components/card'
+import { createMarkup } from '../utils/markup'
 
-function IndexPage() {
+function IndexPage () {
   const data = useStaticQuery(
     graphql`
       query {
@@ -35,12 +34,12 @@ function IndexPage() {
     `
   )
 
-  let edges = data.allMarkdownRemark.edges
+  const edges = data.allMarkdownRemark.edges
 
-  let featuredPost = edges.shift().node
+  const featuredPost = edges.shift().node
 
   let rows = []
-  let chunkSize = 3
+  const chunkSize = 3
 
   rows.push(
     edges.splice(0, edges.length % 3).map(({ node }) => {
@@ -85,7 +84,7 @@ function IndexPage() {
   rows = rows.map(row => {
     k++
     return (
-      <div key={"row-" + k} className="columns">
+      <div key={'row-' + k} className="columns">
         {row}
       </div>
     )
@@ -112,7 +111,7 @@ function IndexPage() {
                 </Link>
               </div>
               <div className="column">
-                <figure class="image featured-post-image">
+                <figure className="image featured-post-image">
                   <img src={featuredPost.frontmatter.posterImage} alt="" />
                 </figure>
               </div>

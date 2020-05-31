@@ -1,11 +1,11 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { createMarkup } from "../utils/markup"
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import { createMarkup } from '../utils/markup'
 
-function ContactPage() {
+function ContactPage () {
   const data = useStaticQuery(
     graphql`
       query {
@@ -26,66 +26,66 @@ function ContactPage() {
   )
 
   const handleFormValidation = () => {
-    const nameInput = document.getElementById("name-input")
-    const emailInput = document.getElementById("email-input")
-    const messageInput = document.getElementById("message-input")
+    const nameInput = document.getElementById('name-input')
+    const emailInput = document.getElementById('email-input')
+    const messageInput = document.getElementById('message-input')
 
     const emailRegex = new RegExp(
-      "^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$"
+      '^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$'
     )
 
-    if (nameInput.getAttribute("dirty")) {
+    if (nameInput.getAttribute('dirty')) {
       if (nameInput.value) {
-        nameInput.classList.add("is-success")
-        nameInput.classList.remove("is-danger")
+        nameInput.classList.add('is-success')
+        nameInput.classList.remove('is-danger')
       } else {
-        nameInput.classList.add("is-danger")
-        nameInput.classList.remove("is-success")
+        nameInput.classList.add('is-danger')
+        nameInput.classList.remove('is-success')
       }
     } else {
-      nameInput.classList.remove("is-danger")
-      nameInput.classList.remove("is-success")
+      nameInput.classList.remove('is-danger')
+      nameInput.classList.remove('is-success')
     }
 
-    if (emailInput.getAttribute("dirty")) {
+    if (emailInput.getAttribute('dirty')) {
       if (emailRegex.test(emailInput.value)) {
-        emailInput.classList.add("is-success")
-        emailInput.classList.remove("is-danger")
+        emailInput.classList.add('is-success')
+        emailInput.classList.remove('is-danger')
       } else {
-        emailInput.classList.add("is-danger")
-        emailInput.classList.remove("is-success")
+        emailInput.classList.add('is-danger')
+        emailInput.classList.remove('is-success')
       }
     } else {
-      emailInput.classList.remove("is-danger")
-      emailInput.classList.remove("is-success")
+      emailInput.classList.remove('is-danger')
+      emailInput.classList.remove('is-success')
     }
-    if (messageInput.getAttribute("dirty")) {
+    if (messageInput.getAttribute('dirty')) {
       if (messageInput.value) {
-        messageInput.classList.add("is-success")
-        messageInput.classList.remove("is-danger")
+        messageInput.classList.add('is-success')
+        messageInput.classList.remove('is-danger')
       } else {
-        messageInput.classList.add("is-danger")
-        messageInput.classList.remove("is-success")
+        messageInput.classList.add('is-danger')
+        messageInput.classList.remove('is-success')
       }
     } else {
-      messageInput.classList.remove("is-danger")
-      messageInput.classList.remove("is-success")
+      messageInput.classList.remove('is-danger')
+      messageInput.classList.remove('is-success')
     }
   }
 
   const handleFormClear = e => {
     e.preventDefault()
-    const form = document.getElementById("contact-form")
-    const inputs = [].slice.call(form.getElementsByClassName("input"))
+    const form = document.getElementById('contact-form')
+    const inputs = [].slice.call(form.getElementsByClassName('input'))
 
     form.reset()
     inputs.forEach(element => {
-      element.removeAttribute("dirty")
+      element.removeAttribute('dirty')
     })
   }
 
   const handleInputDirty = e => {
-    e.target.setAttribute("dirty", "true")
+    e.target.setAttribute('dirty', 'true')
   }
 
   const { edges } = data.allMarkdownRemark
@@ -112,14 +112,13 @@ function ContactPage() {
               onChange={handleFormValidation}
             >
               <input type="hidden" name="form-name" value="contact" />
-              <p class="is-hidden">
+              <p className="is-hidden">
                 <label>
-                  Don’t fill this out if you're human:{" "}
                   <input name="bot-field" />
                 </label>
               </p>
               <div className="field">
-                <label for="name-input" className="label">
+                <label htmlFor="name-input" className="label">
                   Name
                 </label>
                 <div className="control">
@@ -136,7 +135,7 @@ function ContactPage() {
               </div>
 
               <div className="field">
-                <label for="email-input" className="label">
+                <label htmlFor="email-input" className="label">
                   Email
                 </label>
                 <div className="control">
@@ -153,7 +152,7 @@ function ContactPage() {
               </div>
 
               <div className="field">
-                <label for="message-input" className="label">
+                <label htmlFor="message-input" className="label">
                   Message
                 </label>
                 <div className="control">

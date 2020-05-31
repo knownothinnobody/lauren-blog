@@ -1,29 +1,29 @@
-import { Link } from "gatsby"
-import React from "react"
+import { Link } from 'gatsby'
+import React from 'react'
 
-import image from "../images/logo.png"
+import image from '../images/logo.png'
 
 class Header extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.state = {
-      isOpen: "is-not-active",
+      isOpen: 'is-not-active'
     }
   }
 
-  toggleNavbar = () => {
+  toggleNavbar () {
     // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu
-    let active =
-      this.state.isOpen === "is-not-active" ? "is-active" : "is-not-active"
+    const active =
+      this.state.isOpen === 'is-not-active' ? 'is-active' : 'is-not-active'
     this.setState({
-      isOpen: active,
+      isOpen: active
     })
     console.log(this.state)
     this.forceUpdate()
   }
 
-  render() {
+  render () {
     return (
       <nav
         className="navbar is-fixed-top"
@@ -37,7 +37,7 @@ class Header extends React.Component {
             </Link>
             <a
               role="button"
-              className={"navbar-burger burger " + this.state.isOpen}
+              className={'navbar-burger burger ' + this.state.isOpen}
               aria-label="menu"
               aria-expanded="false"
               onClick={this.toggleNavbar}
@@ -47,7 +47,7 @@ class Header extends React.Component {
               <span aria-hidden="true"></span>
             </a>
           </div>
-          <div className={"navbar-menu " + this.state.isOpen}>
+          <div className={'navbar-menu ' + this.state.isOpen}>
             <div className="navbar-start">
               <Link className="navbar-item" to="/">
                 Home

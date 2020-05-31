@@ -1,8 +1,8 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-function Footer() {
+function Footer () {
   const data = useStaticQuery(
     graphql`
       query {
@@ -31,13 +31,13 @@ function Footer() {
   const { frontmatter } = edges[0].node
 
   const socialIcons = {
-    linkedinLink: "linkedin",
-    facebookLink: "facebook",
-    twitterLink: "twitter",
-    instagramLink: "instagram",
-    githubLink: "github",
-    mediumLink: "medium",
-    stackLink: "stack-overflow",
+    linkedinLink: 'linkedin',
+    facebookLink: 'facebook',
+    twitterLink: 'twitter',
+    instagramLink: 'instagram',
+    githubLink: 'github',
+    mediumLink: 'medium',
+    stackLink: 'stack-overflow'
   }
 
   const socialListIcons = Object.keys(socialIcons).map(socialLink => {
@@ -45,7 +45,7 @@ function Footer() {
       return (
         <span key={socialLink} className="icon">
           <a className="has-text-primary" href={frontmatter[socialLink]}>
-            <FontAwesomeIcon icon={["fab", socialIcons[socialLink]]} />
+            <FontAwesomeIcon icon={['fab', socialIcons[socialLink]]} />
           </a>
         </span>
       )
@@ -54,7 +54,7 @@ function Footer() {
     }
   })
 
-  let currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear()
 
   return (
     <footer className="footer">
@@ -63,8 +63,8 @@ function Footer() {
           <div className="column has-text-left copyright-column">
             <ul className="footer-list is-marginless">
               <li className="footer-list-item">
-                &copy;{" "}
-                {currentYear > 2020 ? "2020 - " + currentYear : currentYear}{" "}
+                &copy;{' '}
+                {currentYear > 2020 ? '2020 - ' + currentYear : currentYear}{' '}
                 Lauren Ebidia
               </li>
             </ul>
