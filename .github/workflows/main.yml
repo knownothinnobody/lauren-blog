@@ -15,6 +15,7 @@ jobs:
           path: |
             ./.cache
             ./public
+          key: ${{ runner.os }}
       - name: Cache Node Modules
         uses: actions/cache@v2
         with:
