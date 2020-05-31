@@ -9,13 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: npm audit
       - name: Cache Node Modules
         uses: actions/cache@v2
         with:
           path: |
             ./node_modules
           key: ${{ runner.os }}-${{ hashFiles('./package-lock.json') }}
-      - run: npm audit
+      - run: NODE_ENV=development npm ci
       - run: npm run test
       - name: Cache Gatsby Files
         uses: actions/cache@v2
