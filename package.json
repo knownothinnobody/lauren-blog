@@ -72,12 +72,12 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "lint": "eslint ./src/**/*.{js,jsx} --fix",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "jest"
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm run format && npm run lint && git add .",
-      "pre-push": "npm audit"
+      "pre-push": "npm audit && npm run test"
     }
   },
   "repository": {

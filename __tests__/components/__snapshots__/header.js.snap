@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<nav
+  aria-label="main navigation"
+  className="navbar is-fixed-top"
+  role="navigation"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="navbar-brand"
+    >
+      <a
+        className="navbar-item logo-image-holder"
+        href="/"
+      >
+        <img
+          alt=""
+          aria-hidden="true"
+          src="test-file-stub"
+        />
+      </a>
+      <a
+        aria-expanded="false"
+        aria-label="menu"
+        className="navbar-burger burger is-not-active"
+        onClick={[Function]}
+        role="button"
+      >
+        <span
+          aria-hidden="true"
+        />
+        <span
+          aria-hidden="true"
+        />
+        <span
+          aria-hidden="true"
+        />
+      </a>
+    </div>
+    <div
+      className="navbar-menu is-not-active"
+    >
+      <div
+        className="navbar-start"
+      >
+        <a
+          className="navbar-item"
+          href="/"
+        >
+          Home
+        </a>
+        <a
+          className="navbar-item"
+          href="/about"
+        >
+          About
+        </a>
+        <a
+          className="navbar-item"
+          href="contact"
+        >
+          Contact
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+`;

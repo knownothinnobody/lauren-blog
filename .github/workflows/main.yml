@@ -9,6 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Cache Node Modules
+        uses: actions/cache@v2
+        with:
+          path: |
+            ./node_modules
+          key: ${{ runner.os }}-${{ hashFiles('./package-lock.json') }}
+      - run: npm audit
+      - run: npm run test
       - name: Cache Gatsby Files
         uses: actions/cache@v2
         with:
@@ -16,12 +24,6 @@ jobs:
             ./.cache
             ./public
           key: ${{ runner.os }}
-      - name: Cache Node Modules
-        uses: actions/cache@v2
-        with:
-          path: |
-            ./node_modules
-          key: ${{ runner.os }}-${{ hashFiles('./package-lock.json') }}
       - uses: knownothinnobody/gatsby-netlify-action@v3.1.8
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
