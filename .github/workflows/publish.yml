@@ -9,13 +9,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: Cache Node Modules
+        id: cache-node-modules
+        uses: actions/cache@v2
+        with:
+          path: |
+            ./node_modules
+          key: ${{ runner.os }}-${{ hashFiles('./package-lock.json') }}
+
+      - name: Install Dependencies
+        if: steps.cache-primes.outputs.cache-hit != true
+        run: NODE_ENV=development npm ci
+
       - name: Cache Gatsby Files
+        id: cache-gatsby-files
         uses: actions/cache@v2
         with:
           path: |
             ./.cache
             ./public
           key: ${{ runner.os }}
+
       - uses: knownothinnobody/gatsby-netlify-action@v3.1.8
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}

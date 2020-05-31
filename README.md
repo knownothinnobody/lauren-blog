@@ -1,44 +1,53 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+  <a href="https://mybluebackpack.netlify.app/">
+    <img alt="MyBlueBackpack" src="https://mybluebackpack.netlify.app/static/logo-9c77f5d8d77711e398f07833a6c3fc05.png" width="125" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby's default starter
+  MyBlueBackpack
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+## 💫 Status
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+![Gatsby Netlify Publish](https://github.com/knownothinnobody/lauren-blog/workflows/Gatsby%20Netlify%20Publish/badge.svg)
+![Security Tests](https://github.com/knownothinnobody/lauren-blog/workflows/Security%20Tests/badge.svg)
+![Lint and Test Code](https://github.com/knownothinnobody/lauren-blog/workflows/Lint%20and%20Test%20Code/badge.svg)
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+If you want to use this application as a template here is what you would have to do:
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+1.  **Clone the repo**
 
     ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
+    # create a new Gatsby application using the default starter
+    git clone git@github.com:knownothinnobody/lauren-blog.git blog
     ```
 
-1.  **Start developing.**
+2.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
+    Navigate into your new applications’s directory and start it up.
 
     ```shell
-    cd my-default-starter/
+    cd blog/
     gatsby develop
-    ```
-
-1.  **Open the source code and start editing!**
 
     Your site is now running at `http://localhost:8000`!
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+    ```
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+3.  **Open the source code and set the required variables**
+
+    Open the `blog` directory in your code editor of choice and edit `package.json`. Update the required fields here to identify yourself as the owner of this repo.
+
+    You will also need to set a `NETLIFY_AUTH_TOKEN` in the secrets for the repo.
+
+    You will also need to the `site-name` in `blog/.github/workflows/publish.yml` to your site name from Netlify if you want to use the Netlify Deploy.
+
+    If you want to take advantage of the `.dependabot/config.yml` you will also need to link to [Dependabot](https://dependabot.com/)
+
+    Finally, for the analytics you will need to update `gatsby-config.js` under the `gatsby-plugin-ackee-tracker` to point to your `server` and `domainId`.
 
 ## 🧐 What's inside?
 
@@ -46,7 +55,15 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
     .
     ├── node_modules
+    ├── .dependabot
+    ├── .github/workflows
+    ├── __mocks__
+    ├── __tests__
+    ├── cypress
+    ├── reports
     ├── src
+    ├── static
+    ├── .eslintrc.json
     ├── .gitignore
     ├── .prettierrc
     ├── gatsby-browser.js
@@ -56,6 +73,10 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     ├── LICENSE
     ├── package-lock.json
     ├── package.json
+    ├── jest.config.js
+    ├── stryker.conf.json
+    ├── netlify.toml
+    ├── cypress.json
     └── README.md
 
 1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
@@ -82,7 +103,33 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 12. **`README.md`**: A text file containing useful reference information about your project.
 
-## 🎓 Learning Gatsby
+13. **`/.dependabot`**: A folder containing the Dependabot Config file. This is used to set the rules around automated dependency updates.
+
+14. **`/.github/workflows`**: A folder containing the CI/CD pipeline created using GitHub Actions.
+
+15. **`/__mocks__`**: A folder containing the Jest Unit Test Mocks.
+
+16. **`/__tests__`**: A folder containing the Jest Unit Tests.
+
+17. **`/cypress`**: A folder containing the Cypress Integration Tests.
+
+18. **`/reports`**: A folder containing the Stryker Mutation Test Reports.
+
+19. **`/static`**: A folder containing the static assest for the site. Including the static CMS portion powered by NetlifyCMS.
+
+20. **`.eslintrc.json`**: ESLint Config linked to Prettier for Linting JS and JSX.
+
+21. **`cypress.json`**: Cypress Config for Integration Tests.
+
+22. **`jest.config.js`**: Jest Config for Unit Tests.
+
+23. **`netlify.toml`**: Netlify Config for managing IaC.
+
+24. **`stryker.conf.json`**: Stryker Config for Mutation Testing.
+
+## 🎓 Methodology
+
+### Gatsby
 
 Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
 
@@ -90,10 +137,50 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
 
-## 💫 Deploy
+### CMS
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+We are using a largely GitOps based flow for our CMS. The CMS itself is powered by [NetlifyCMS](https://www.netlifycms.org/) and then integrated with [GitGateway](https://docs.netlify.com/visitor-access/git-gateway/) through Netlify for our Identity and Access Management. The advangtage of this application is that blog content is stored alongside the rest of the code as markdown filed and queried at build time. By using the experimental gatsby incremental build with a publish action on the master branch, where the CMS pushes to, we can achieve real time updates that are editor and developer friendly!
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
+### Unit Testing
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+Unit testing is pretty standard now a days and we use Jest as our unit test runner. The tests take advantage of the snapshot feature in order to determine if the output from React Components is altered unexpectedly.
+
+### Linting and Formatting
+
+Linting and formatting are handled by [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) respectively. They are used as part of a pre-commit hook using [Husky](https://github.com/typicode/husky) to enforce coding standards without a lot of developer toil.
+
+### Software Composition Analysis
+
+Right now Software Composition Analysis is handled by `npm audit` on a weekly basis but the plan is to move the SCA component to it's own GitHub action. The idea behind the weekly run is that updates are largely handled by Dependabot and so I only want to be alerted if a security issue can't be resolved there. This also keeps other builds idempotent and prevents developers becomming frustrated by builds that fail due to issues outside their control.
+
+### Integration Testing
+
+[Cypress](https://www.cypress.io/) handles our Integration and End-to-End testing. This also incorporates our accessbility testing. This may also be a good place to integrate with LightHouse CI and aensure that we meet certain performance metrics.
+
+### Mutation Testing
+
+[Stryker](https://stryker-mutator.io/) handles the mutation testing and ensures that our unit tests are adequate and not just returning false positives or negatives.
+
+### Analytics
+
+The analytics for this site are privacy focused and are monitored using a forked version of [Ackee](https://github.com/knownothinnobody/Ackee). The analytics server is hosted on a free tier of Heroku and uses a free MongoDB integration.
+
+### SEO
+
+The application uses `gatsby-plugin-sitemap` to generate a sitemap alongside using `react-helmet` to ensure each page has the appropriate metadata for Search Engine Optimization. This portion hasn't been optimized fully yet however.
+
+### RSS
+
+This application uses the `gatsby-plugin-feeds` to generate an RSS feed on build. The eventual goal is to integrate this feed as an automated means of distributing the blog.
+
+### CI/CD
+
+This applicaiton relies on the GitHub Actions to create Workflows. Currently we have a publish, test, and security workflow respectively in order to optimize for low latency publishing.
+
+### Production Environment
+
+This site is builtoff of the Gatsby Default Starter in order to generate the front end which is hosted by Netlify.
+
+The CMS portion is managed with NetlifyCMS and Netlify once again provides the IAM for the CMS.
+
+Form handling is also provided by Netlify Forms but the goal is to migrate this to Netlify Functions.
