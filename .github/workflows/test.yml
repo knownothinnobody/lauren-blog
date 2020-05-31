@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Lint Code
-        run: npm run lint
       - name: Cache Node Modules
         uses: actions/cache@v2
         with:
@@ -20,6 +18,8 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('./package-lock.json') }}
       - name: Install Dependencies
         run: NODE_ENV=development npm ci
+      - name: Lint Code
+        run: npm run lint
       - name: Run Unit Tests
         run: npm run test -- --coverage --ci
       - name: Run Integration Tests
