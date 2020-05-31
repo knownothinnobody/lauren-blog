@@ -21,6 +21,11 @@ exports[`Header renders correctly 1`] = `
           aria-hidden="true"
           src="test-file-stub"
         />
+        <span
+          className="is-sr-only"
+        >
+          Home
+        </span>
       </a>
       <a
         aria-expanded="false"
