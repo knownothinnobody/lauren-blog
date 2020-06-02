@@ -16,7 +16,7 @@
     "gatsby-plugin-ackee-tracker": "^1.4.0",
     "gatsby-plugin-feed": "^2.5.4",
     "gatsby-plugin-manifest": "^2.4.9",
-    "gatsby-plugin-netlify": "^2.3.3",
+    "gatsby-plugin-netlify": "^2.3.4",
     "gatsby-plugin-netlify-cms": "^4.3.4",
     "gatsby-plugin-offline": "^3.2.8",
     "gatsby-plugin-postcss": "^2.3.3",
