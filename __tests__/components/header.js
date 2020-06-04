@@ -1,11 +1,23 @@
 import React from "react"
-import renderer from "react-test-renderer"
+import { render, shallow, mount } from "enzyme"
 
 import Header from "../../src/components/header"
 
 describe("Header", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<Header />).toJSON()
-    expect(tree).toMatchSnapshot()
+    expect(render(<Header />)).toMatchSnapshot()
+  })
+
+  it("has initial state of is-not-active", () => {
+    const wrapper = shallow(<Header />)
+    const instance = wrapper.instance()
+    expect(wrapper.state("isOpen")).toBe("is-not-active")
+  })
+
+  it("has state of is-active after toggle", () => {
+    const wrapper = shallow(<Header />)
+    const instance = wrapper.instance()
+    instance.toggleNavbar()
+    expect(wrapper.state("isOpen")).toBe("is-active")
   })
 })
