@@ -20,4 +20,12 @@ describe("Header", () => {
     instance.toggleNavbar()
     expect(wrapper.state("isOpen")).toBe("is-active")
   })
+
+  it("has state of is-not-active after two toggles", () => {
+    const wrapper = shallow(<Header />)
+    const instance = wrapper.instance()
+    instance.toggleNavbar()
+    instance.toggleNavbar()
+    expect(wrapper.state("isOpen")).toBe("is-not-active")
+  })
 })
