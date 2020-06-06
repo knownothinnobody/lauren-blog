@@ -24,7 +24,6 @@ function IndexPage () {
               fields {
                 slug
               }
-              fileAbsolutePath
               timeToRead
               excerpt(pruneLength: 500)
             }

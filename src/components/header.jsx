@@ -19,7 +19,6 @@ class Header extends React.Component {
     this.setState({
       isOpen: active
     })
-    console.log(this.state)
     this.forceUpdate()
   }
 

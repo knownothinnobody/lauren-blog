@@ -1,0 +1,36 @@
+name: Release
+
+on:
+  schedule:
+  - cron: 0 8 * * *
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Cache Node Modules
+        id: cache-node-modules
+        uses: actions/cache@v2
+        with:
+          path: |
+            ./node_modules
+          key: ${{ runner.os }}-${{ hashFiles('./package-lock.json') }}
+
+      - name: Install Dependencies
+        if: steps.cache-node-modules.outputs.cache-hit != true
+        run: NODE_ENV=development npm i
+
+      - name: Lint Code
+        run: npm run lint
+
+      - name: Run Unit Tests
+        run: npm run test -- --coverage --ci
+
+      - name: Run Integration Tests
+        run: npm run test:e2e:ci
+
+      - uses: knownothinnobody/github-br-merge-action@v1.0.19
+        with:
+          token: ${{ secrets.AUTH_TOKEN }}
