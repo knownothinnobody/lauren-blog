@@ -26,7 +26,7 @@
     "gatsby-plugin-sitemap": "^2.4.4",
     "gatsby-plugin-typography": "^2.5.3",
     "gatsby-remark-reading-time": "^1.1.0",
-    "gatsby-source-filesystem": "^2.3.10",
+    "gatsby-source-filesystem": "^2.3.11",
     "gatsby-transformer-remark": "^2.8.14",
     "gatsby-transformer-sharp": "^2.5.4",
     "netlify-cli": "^2.53.0",
