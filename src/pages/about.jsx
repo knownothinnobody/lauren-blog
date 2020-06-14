@@ -32,7 +32,9 @@ function AboutPage () {
     <Layout>
       <SEO title="About" />
       <div className="container">
-        <h1 className="main-title is-size-1">{frontmatter.aboutTitle}</h1>
+        <h1 className="main-title is-size-1 about-title">
+          {frontmatter.aboutTitle}
+        </h1>
         <div
           dangerouslySetInnerHTML={createMarkup(frontmatter.aboutBody)}
         ></div>

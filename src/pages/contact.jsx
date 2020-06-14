@@ -95,7 +95,9 @@ function ContactPage () {
     <Layout>
       <SEO title="Contact" />
       <div className="container">
-        <h1 className="main-title is-size-1">{frontmatter.contactTitle}</h1>
+        <h1 className="main-title is-size-1 contact-title">
+          {frontmatter.contactTitle}
+        </h1>
         <div className="columns">
           <div className="column">
             <div
