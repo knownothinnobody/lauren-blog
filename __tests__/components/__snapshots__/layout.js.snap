@@ -1867,7 +1867,7 @@ initialize {
     "namespace": "http://www.w3.org/1999/xhtml",
     "next": Object {
       "attribs": Object {
-        "class": "page-container",
+        "class": "main page-container",
       },
       "children": Array [
         Object {
@@ -2381,7 +2381,7 @@ initialize {
         [Circular],
         Object {
           "attribs": Object {
-            "class": "page-container",
+            "class": "main page-container",
           },
           "children": Array [
             Object {
@@ -2850,7 +2850,7 @@ initialize {
           "parent": null,
           "prev": Object {
             "attribs": Object {
-              "class": "page-container",
+              "class": "main page-container",
             },
             "children": Array [
               Object {
@@ -2921,7 +2921,7 @@ initialize {
   },
   "1": Object {
     "attribs": Object {
-      "class": "page-container",
+      "class": "main page-container",
     },
     "children": Array [
       Object {
@@ -9507,7 +9507,7 @@ initialize {
     "parent": null,
     "prev": Object {
       "attribs": Object {
-        "class": "page-container",
+        "class": "main page-container",
       },
       "children": Array [
         Object {
@@ -15199,7 +15199,7 @@ initialize {
           "namespace": "http://www.w3.org/1999/xhtml",
           "next": Object {
             "attribs": Object {
-              "class": "page-container",
+              "class": "main page-container",
             },
             "children": Array [
               Object {
@@ -15254,7 +15254,7 @@ initialize {
         },
         Object {
           "attribs": Object {
-            "class": "page-container",
+            "class": "main page-container",
           },
           "children": Array [
             Object {
