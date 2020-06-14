@@ -3,8 +3,7 @@
 describe("Visual Testing", () => {
   describe("No significant deviation from UI", () => {
     it("main page", () => {
-      cy.viewport(2560, 1440)
-      cy.visit("/").get(".main").toMatchImageSnapshot({
+      cy.visit("/").get("section.hero").toMatchImageSnapshot({
         threshold: 0.001,
       })
     })
