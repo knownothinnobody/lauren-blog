@@ -656,7 +656,7 @@ initialize {
                       "namespace": "http://www.w3.org/1999/xhtml",
                       "next": Object {
                         "attribs": Object {
-                          "class": "navbar-item",
+                          "class": "navbar-item about-link",
                           "href": "/about",
                         },
                         "children": Array [
@@ -672,7 +672,7 @@ initialize {
                         "namespace": "http://www.w3.org/1999/xhtml",
                         "next": Object {
                           "attribs": Object {
-                            "class": "navbar-item",
+                            "class": "navbar-item contact-link",
                             "href": "contact",
                           },
                           "children": Array [
@@ -725,7 +725,7 @@ initialize {
                     },
                     Object {
                       "attribs": Object {
-                        "class": "navbar-item",
+                        "class": "navbar-item about-link",
                         "href": "/about",
                       },
                       "children": Array [
@@ -741,7 +741,7 @@ initialize {
                       "namespace": "http://www.w3.org/1999/xhtml",
                       "next": Object {
                         "attribs": Object {
-                          "class": "navbar-item",
+                          "class": "navbar-item contact-link",
                           "href": "contact",
                         },
                         "children": Array [
@@ -810,7 +810,7 @@ initialize {
                     },
                     Object {
                       "attribs": Object {
-                        "class": "navbar-item",
+                        "class": "navbar-item contact-link",
                         "href": "contact",
                       },
                       "children": Array [
@@ -828,7 +828,7 @@ initialize {
                       "parent": [Circular],
                       "prev": Object {
                         "attribs": Object {
-                          "class": "navbar-item",
+                          "class": "navbar-item about-link",
                           "href": "/about",
                         },
                         "children": Array [
@@ -959,7 +959,7 @@ initialize {
                     "namespace": "http://www.w3.org/1999/xhtml",
                     "next": Object {
                       "attribs": Object {
-                        "class": "navbar-item",
+                        "class": "navbar-item about-link",
                         "href": "/about",
                       },
                       "children": Array [
@@ -975,7 +975,7 @@ initialize {
                       "namespace": "http://www.w3.org/1999/xhtml",
                       "next": Object {
                         "attribs": Object {
-                          "class": "navbar-item",
+                          "class": "navbar-item contact-link",
                           "href": "contact",
                         },
                         "children": Array [
@@ -1028,7 +1028,7 @@ initialize {
                   },
                   Object {
                     "attribs": Object {
-                      "class": "navbar-item",
+                      "class": "navbar-item about-link",
                       "href": "/about",
                     },
                     "children": Array [
@@ -1044,7 +1044,7 @@ initialize {
                     "namespace": "http://www.w3.org/1999/xhtml",
                     "next": Object {
                       "attribs": Object {
-                        "class": "navbar-item",
+                        "class": "navbar-item contact-link",
                         "href": "contact",
                       },
                       "children": Array [
@@ -1113,7 +1113,7 @@ initialize {
                   },
                   Object {
                     "attribs": Object {
-                      "class": "navbar-item",
+                      "class": "navbar-item contact-link",
                       "href": "contact",
                     },
                     "children": Array [
@@ -1131,7 +1131,7 @@ initialize {
                     "parent": [Circular],
                     "prev": Object {
                       "attribs": Object {
-                        "class": "navbar-item",
+                        "class": "navbar-item about-link",
                         "href": "/about",
                       },
                       "children": Array [
@@ -4723,7 +4723,7 @@ initialize {
                               "namespace": "http://www.w3.org/1999/xhtml",
                               "next": Object {
                                 "attribs": Object {
-                                  "class": "navbar-item",
+                                  "class": "navbar-item about-link",
                                   "href": "/about",
                                 },
                                 "children": Array [
@@ -4739,7 +4739,7 @@ initialize {
                                 "namespace": "http://www.w3.org/1999/xhtml",
                                 "next": Object {
                                   "attribs": Object {
-                                    "class": "navbar-item",
+                                    "class": "navbar-item contact-link",
                                     "href": "contact",
                                   },
                                   "children": Array [
@@ -4792,7 +4792,7 @@ initialize {
                             },
                             Object {
                               "attribs": Object {
-                                "class": "navbar-item",
+                                "class": "navbar-item about-link",
                                 "href": "/about",
                               },
                               "children": Array [
@@ -4808,7 +4808,7 @@ initialize {
                               "namespace": "http://www.w3.org/1999/xhtml",
                               "next": Object {
                                 "attribs": Object {
-                                  "class": "navbar-item",
+                                  "class": "navbar-item contact-link",
                                   "href": "contact",
                                 },
                                 "children": Array [
@@ -4877,7 +4877,7 @@ initialize {
                             },
                             Object {
                               "attribs": Object {
-                                "class": "navbar-item",
+                                "class": "navbar-item contact-link",
                                 "href": "contact",
                               },
                               "children": Array [
@@ -4895,7 +4895,7 @@ initialize {
                               "parent": [Circular],
                               "prev": Object {
                                 "attribs": Object {
-                                  "class": "navbar-item",
+                                  "class": "navbar-item about-link",
                                   "href": "/about",
                                 },
                                 "children": Array [
@@ -5026,7 +5026,7 @@ initialize {
                             "namespace": "http://www.w3.org/1999/xhtml",
                             "next": Object {
                               "attribs": Object {
-                                "class": "navbar-item",
+                                "class": "navbar-item about-link",
                                 "href": "/about",
                               },
                               "children": Array [
@@ -5042,7 +5042,7 @@ initialize {
                               "namespace": "http://www.w3.org/1999/xhtml",
                               "next": Object {
                                 "attribs": Object {
-                                  "class": "navbar-item",
+                                  "class": "navbar-item contact-link",
                                   "href": "contact",
                                 },
                                 "children": Array [
@@ -5095,7 +5095,7 @@ initialize {
                           },
                           Object {
                             "attribs": Object {
-                              "class": "navbar-item",
+                              "class": "navbar-item about-link",
                               "href": "/about",
                             },
                             "children": Array [
@@ -5111,7 +5111,7 @@ initialize {
                             "namespace": "http://www.w3.org/1999/xhtml",
                             "next": Object {
                               "attribs": Object {
-                                "class": "navbar-item",
+                                "class": "navbar-item contact-link",
                                 "href": "contact",
                               },
                               "children": Array [
@@ -5180,7 +5180,7 @@ initialize {
                           },
                           Object {
                             "attribs": Object {
-                              "class": "navbar-item",
+                              "class": "navbar-item contact-link",
                               "href": "contact",
                             },
                             "children": Array [
@@ -5198,7 +5198,7 @@ initialize {
                             "parent": [Circular],
                             "prev": Object {
                               "attribs": Object {
-                                "class": "navbar-item",
+                                "class": "navbar-item about-link",
                                 "href": "/about",
                               },
                               "children": Array [
@@ -6623,7 +6623,7 @@ initialize {
                         "namespace": "http://www.w3.org/1999/xhtml",
                         "next": Object {
                           "attribs": Object {
-                            "class": "navbar-item",
+                            "class": "navbar-item about-link",
                             "href": "/about",
                           },
                           "children": Array [
@@ -6639,7 +6639,7 @@ initialize {
                           "namespace": "http://www.w3.org/1999/xhtml",
                           "next": Object {
                             "attribs": Object {
-                              "class": "navbar-item",
+                              "class": "navbar-item contact-link",
                               "href": "contact",
                             },
                             "children": Array [
@@ -6692,7 +6692,7 @@ initialize {
                       },
                       Object {
                         "attribs": Object {
-                          "class": "navbar-item",
+                          "class": "navbar-item about-link",
                           "href": "/about",
                         },
                         "children": Array [
@@ -6708,7 +6708,7 @@ initialize {
                         "namespace": "http://www.w3.org/1999/xhtml",
                         "next": Object {
                           "attribs": Object {
-                            "class": "navbar-item",
+                            "class": "navbar-item contact-link",
                             "href": "contact",
                           },
                           "children": Array [
@@ -6777,7 +6777,7 @@ initialize {
                       },
                       Object {
                         "attribs": Object {
-                          "class": "navbar-item",
+                          "class": "navbar-item contact-link",
                           "href": "contact",
                         },
                         "children": Array [
@@ -6795,7 +6795,7 @@ initialize {
                         "parent": [Circular],
                         "prev": Object {
                           "attribs": Object {
-                            "class": "navbar-item",
+                            "class": "navbar-item about-link",
                             "href": "/about",
                           },
                           "children": Array [
@@ -6926,7 +6926,7 @@ initialize {
                       "namespace": "http://www.w3.org/1999/xhtml",
                       "next": Object {
                         "attribs": Object {
-                          "class": "navbar-item",
+                          "class": "navbar-item about-link",
                           "href": "/about",
                         },
                         "children": Array [
@@ -6942,7 +6942,7 @@ initialize {
                         "namespace": "http://www.w3.org/1999/xhtml",
                         "next": Object {
                           "attribs": Object {
-                            "class": "navbar-item",
+                            "class": "navbar-item contact-link",
                             "href": "contact",
                           },
                           "children": Array [
@@ -6995,7 +6995,7 @@ initialize {
                     },
                     Object {
                       "attribs": Object {
-                        "class": "navbar-item",
+                        "class": "navbar-item about-link",
                         "href": "/about",
                       },
                       "children": Array [
@@ -7011,7 +7011,7 @@ initialize {
                       "namespace": "http://www.w3.org/1999/xhtml",
                       "next": Object {
                         "attribs": Object {
-                          "class": "navbar-item",
+                          "class": "navbar-item contact-link",
                           "href": "contact",
                         },
                         "children": Array [
@@ -7080,7 +7080,7 @@ initialize {
                     },
                     Object {
                       "attribs": Object {
-                        "class": "navbar-item",
+                        "class": "navbar-item contact-link",
                         "href": "contact",
                       },
                       "children": Array [
@@ -7098,7 +7098,7 @@ initialize {
                       "parent": [Circular],
                       "prev": Object {
                         "attribs": Object {
-                          "class": "navbar-item",
+                          "class": "navbar-item about-link",
                           "href": "/about",
                         },
                         "children": Array [
@@ -8739,7 +8739,7 @@ initialize {
                             "namespace": "http://www.w3.org/1999/xhtml",
                             "next": Object {
                               "attribs": Object {
-                                "class": "navbar-item",
+                                "class": "navbar-item about-link",
                                 "href": "/about",
                               },
                               "children": Array [
@@ -8755,7 +8755,7 @@ initialize {
                               "namespace": "http://www.w3.org/1999/xhtml",
                               "next": Object {
                                 "attribs": Object {
-                                  "class": "navbar-item",
+                                  "class": "navbar-item contact-link",
                                   "href": "contact",
                                 },
                                 "children": Array [
@@ -8808,7 +8808,7 @@ initialize {
                           },
                           Object {
                             "attribs": Object {
-                              "class": "navbar-item",
+                              "class": "navbar-item about-link",
                               "href": "/about",
                             },
                             "children": Array [
@@ -8824,7 +8824,7 @@ initialize {
                             "namespace": "http://www.w3.org/1999/xhtml",
                             "next": Object {
                               "attribs": Object {
-                                "class": "navbar-item",
+                                "class": "navbar-item contact-link",
                                 "href": "contact",
                               },
                               "children": Array [
@@ -8893,7 +8893,7 @@ initialize {
                           },
                           Object {
                             "attribs": Object {
-                              "class": "navbar-item",
+                              "class": "navbar-item contact-link",
                               "href": "contact",
                             },
                             "children": Array [
@@ -8911,7 +8911,7 @@ initialize {
                             "parent": [Circular],
                             "prev": Object {
                               "attribs": Object {
-                                "class": "navbar-item",
+                                "class": "navbar-item about-link",
                                 "href": "/about",
                               },
                               "children": Array [
@@ -9042,7 +9042,7 @@ initialize {
                           "namespace": "http://www.w3.org/1999/xhtml",
                           "next": Object {
                             "attribs": Object {
-                              "class": "navbar-item",
+                              "class": "navbar-item about-link",
                               "href": "/about",
                             },
                             "children": Array [
@@ -9058,7 +9058,7 @@ initialize {
                             "namespace": "http://www.w3.org/1999/xhtml",
                             "next": Object {
                               "attribs": Object {
-                                "class": "navbar-item",
+                                "class": "navbar-item contact-link",
                                 "href": "contact",
                               },
                               "children": Array [
@@ -9111,7 +9111,7 @@ initialize {
                         },
                         Object {
                           "attribs": Object {
-                            "class": "navbar-item",
+                            "class": "navbar-item about-link",
                             "href": "/about",
                           },
                           "children": Array [
@@ -9127,7 +9127,7 @@ initialize {
                           "namespace": "http://www.w3.org/1999/xhtml",
                           "next": Object {
                             "attribs": Object {
-                              "class": "navbar-item",
+                              "class": "navbar-item contact-link",
                               "href": "contact",
                             },
                             "children": Array [
@@ -9196,7 +9196,7 @@ initialize {
                         },
                         Object {
                           "attribs": Object {
-                            "class": "navbar-item",
+                            "class": "navbar-item contact-link",
                             "href": "contact",
                           },
                           "children": Array [
@@ -9214,7 +9214,7 @@ initialize {
                           "parent": [Circular],
                           "prev": Object {
                             "attribs": Object {
-                              "class": "navbar-item",
+                              "class": "navbar-item about-link",
                               "href": "/about",
                             },
                             "children": Array [
@@ -11324,7 +11324,7 @@ initialize {
                           "namespace": "http://www.w3.org/1999/xhtml",
                           "next": Object {
                             "attribs": Object {
-                              "class": "navbar-item",
+                              "class": "navbar-item about-link",
                               "href": "/about",
                             },
                             "children": Array [
@@ -11340,7 +11340,7 @@ initialize {
                             "namespace": "http://www.w3.org/1999/xhtml",
                             "next": Object {
                               "attribs": Object {
-                                "class": "navbar-item",
+                                "class": "navbar-item contact-link",
                                 "href": "contact",
                               },
                               "children": Array [
@@ -11393,7 +11393,7 @@ initialize {
                         },
                         Object {
                           "attribs": Object {
-                            "class": "navbar-item",
+                            "class": "navbar-item about-link",
                             "href": "/about",
                           },
                           "children": Array [
@@ -11409,7 +11409,7 @@ initialize {
                           "namespace": "http://www.w3.org/1999/xhtml",
                           "next": Object {
                             "attribs": Object {
-                              "class": "navbar-item",
+                              "class": "navbar-item contact-link",
                               "href": "contact",
                             },
                             "children": Array [
@@ -11478,7 +11478,7 @@ initialize {
                         },
                         Object {
                           "attribs": Object {
-                            "class": "navbar-item",
+                            "class": "navbar-item contact-link",
                             "href": "contact",
                           },
                           "children": Array [
@@ -11496,7 +11496,7 @@ initialize {
                           "parent": [Circular],
                           "prev": Object {
                             "attribs": Object {
-                              "class": "navbar-item",
+                              "class": "navbar-item about-link",
                               "href": "/about",
                             },
                             "children": Array [
@@ -11627,7 +11627,7 @@ initialize {
                         "namespace": "http://www.w3.org/1999/xhtml",
                         "next": Object {
                           "attribs": Object {
-                            "class": "navbar-item",
+                            "class": "navbar-item about-link",
                             "href": "/about",
                           },
                           "children": Array [
@@ -11643,7 +11643,7 @@ initialize {
                           "namespace": "http://www.w3.org/1999/xhtml",
                           "next": Object {
                             "attribs": Object {
-                              "class": "navbar-item",
+                              "class": "navbar-item contact-link",
                               "href": "contact",
                             },
                             "children": Array [
@@ -11696,7 +11696,7 @@ initialize {
                       },
                       Object {
                         "attribs": Object {
-                          "class": "navbar-item",
+                          "class": "navbar-item about-link",
                           "href": "/about",
                         },
                         "children": Array [
@@ -11712,7 +11712,7 @@ initialize {
                         "namespace": "http://www.w3.org/1999/xhtml",
                         "next": Object {
                           "attribs": Object {
-                            "class": "navbar-item",
+                            "class": "navbar-item contact-link",
                             "href": "contact",
                           },
                           "children": Array [
@@ -11781,7 +11781,7 @@ initialize {
                       },
                       Object {
                         "attribs": Object {
-                          "class": "navbar-item",
+                          "class": "navbar-item contact-link",
                           "href": "contact",
                         },
                         "children": Array [
@@ -11799,7 +11799,7 @@ initialize {
                         "parent": [Circular],
                         "prev": Object {
                           "attribs": Object {
-                            "class": "navbar-item",
+                            "class": "navbar-item about-link",
                             "href": "/about",
                           },
                           "children": Array [
@@ -13221,7 +13221,7 @@ initialize {
                               "namespace": "http://www.w3.org/1999/xhtml",
                               "next": Object {
                                 "attribs": Object {
-                                  "class": "navbar-item",
+                                  "class": "navbar-item about-link",
                                   "href": "/about",
                                 },
                                 "children": Array [
@@ -13237,7 +13237,7 @@ initialize {
                                 "namespace": "http://www.w3.org/1999/xhtml",
                                 "next": Object {
                                   "attribs": Object {
-                                    "class": "navbar-item",
+                                    "class": "navbar-item contact-link",
                                     "href": "contact",
                                   },
                                   "children": Array [
@@ -13290,7 +13290,7 @@ initialize {
                             },
                             Object {
                               "attribs": Object {
-                                "class": "navbar-item",
+                                "class": "navbar-item about-link",
                                 "href": "/about",
                               },
                               "children": Array [
@@ -13306,7 +13306,7 @@ initialize {
                               "namespace": "http://www.w3.org/1999/xhtml",
                               "next": Object {
                                 "attribs": Object {
-                                  "class": "navbar-item",
+                                  "class": "navbar-item contact-link",
                                   "href": "contact",
                                 },
                                 "children": Array [
@@ -13375,7 +13375,7 @@ initialize {
                             },
                             Object {
                               "attribs": Object {
-                                "class": "navbar-item",
+                                "class": "navbar-item contact-link",
                                 "href": "contact",
                               },
                               "children": Array [
@@ -13393,7 +13393,7 @@ initialize {
                               "parent": [Circular],
                               "prev": Object {
                                 "attribs": Object {
-                                  "class": "navbar-item",
+                                  "class": "navbar-item about-link",
                                   "href": "/about",
                                 },
                                 "children": Array [
@@ -13524,7 +13524,7 @@ initialize {
                             "namespace": "http://www.w3.org/1999/xhtml",
                             "next": Object {
                               "attribs": Object {
-                                "class": "navbar-item",
+                                "class": "navbar-item about-link",
                                 "href": "/about",
                               },
                               "children": Array [
@@ -13540,7 +13540,7 @@ initialize {
                               "namespace": "http://www.w3.org/1999/xhtml",
                               "next": Object {
                                 "attribs": Object {
-                                  "class": "navbar-item",
+                                  "class": "navbar-item contact-link",
                                   "href": "contact",
                                 },
                                 "children": Array [
@@ -13593,7 +13593,7 @@ initialize {
                           },
                           Object {
                             "attribs": Object {
-                              "class": "navbar-item",
+                              "class": "navbar-item about-link",
                               "href": "/about",
                             },
                             "children": Array [
@@ -13609,7 +13609,7 @@ initialize {
                             "namespace": "http://www.w3.org/1999/xhtml",
                             "next": Object {
                               "attribs": Object {
-                                "class": "navbar-item",
+                                "class": "navbar-item contact-link",
                                 "href": "contact",
                               },
                               "children": Array [
@@ -13678,7 +13678,7 @@ initialize {
                           },
                           Object {
                             "attribs": Object {
-                              "class": "navbar-item",
+                              "class": "navbar-item contact-link",
                               "href": "contact",
                             },
                             "children": Array [
@@ -13696,7 +13696,7 @@ initialize {
                             "parent": [Circular],
                             "prev": Object {
                               "attribs": Object {
-                                "class": "navbar-item",
+                                "class": "navbar-item about-link",
                                 "href": "/about",
                               },
                               "children": Array [
@@ -15123,7 +15123,7 @@ initialize {
                             "namespace": "http://www.w3.org/1999/xhtml",
                             "next": Object {
                               "attribs": Object {
-                                "class": "navbar-item",
+                                "class": "navbar-item about-link",
                                 "href": "/about",
                               },
                               "children": Array [
@@ -15139,7 +15139,7 @@ initialize {
                               "namespace": "http://www.w3.org/1999/xhtml",
                               "next": Object {
                                 "attribs": Object {
-                                  "class": "navbar-item",
+                                  "class": "navbar-item contact-link",
                                   "href": "contact",
                                 },
                                 "children": Array [
@@ -15192,7 +15192,7 @@ initialize {
                           },
                           Object {
                             "attribs": Object {
-                              "class": "navbar-item",
+                              "class": "navbar-item about-link",
                               "href": "/about",
                             },
                             "children": Array [
@@ -15208,7 +15208,7 @@ initialize {
                             "namespace": "http://www.w3.org/1999/xhtml",
                             "next": Object {
                               "attribs": Object {
-                                "class": "navbar-item",
+                                "class": "navbar-item contact-link",
                                 "href": "contact",
                               },
                               "children": Array [
@@ -15277,7 +15277,7 @@ initialize {
                           },
                           Object {
                             "attribs": Object {
-                              "class": "navbar-item",
+                              "class": "navbar-item contact-link",
                               "href": "contact",
                             },
                             "children": Array [
@@ -15295,7 +15295,7 @@ initialize {
                             "parent": [Circular],
                             "prev": Object {
                               "attribs": Object {
-                                "class": "navbar-item",
+                                "class": "navbar-item about-link",
                                 "href": "/about",
                               },
                               "children": Array [
@@ -15426,7 +15426,7 @@ initialize {
                           "namespace": "http://www.w3.org/1999/xhtml",
                           "next": Object {
                             "attribs": Object {
-                              "class": "navbar-item",
+                              "class": "navbar-item about-link",
                               "href": "/about",
                             },
                             "children": Array [
@@ -15442,7 +15442,7 @@ initialize {
                             "namespace": "http://www.w3.org/1999/xhtml",
                             "next": Object {
                               "attribs": Object {
-                                "class": "navbar-item",
+                                "class": "navbar-item contact-link",
                                 "href": "contact",
                               },
                               "children": Array [
@@ -15495,7 +15495,7 @@ initialize {
                         },
                         Object {
                           "attribs": Object {
-                            "class": "navbar-item",
+                            "class": "navbar-item about-link",
                             "href": "/about",
                           },
                           "children": Array [
@@ -15511,7 +15511,7 @@ initialize {
                           "namespace": "http://www.w3.org/1999/xhtml",
                           "next": Object {
                             "attribs": Object {
-                              "class": "navbar-item",
+                              "class": "navbar-item contact-link",
                               "href": "contact",
                             },
                             "children": Array [
@@ -15580,7 +15580,7 @@ initialize {
                         },
                         Object {
                           "attribs": Object {
-                            "class": "navbar-item",
+                            "class": "navbar-item contact-link",
                             "href": "contact",
                           },
                           "children": Array [
@@ -15598,7 +15598,7 @@ initialize {
                           "parent": [Circular],
                           "prev": Object {
                             "attribs": Object {
-                              "class": "navbar-item",
+                              "class": "navbar-item about-link",
                               "href": "/about",
                             },
                             "children": Array [
@@ -17525,7 +17525,7 @@ initialize {
                               "namespace": "http://www.w3.org/1999/xhtml",
                               "next": Object {
                                 "attribs": Object {
-                                  "class": "navbar-item",
+                                  "class": "navbar-item about-link",
                                   "href": "/about",
                                 },
                                 "children": Array [
@@ -17541,7 +17541,7 @@ initialize {
                                 "namespace": "http://www.w3.org/1999/xhtml",
                                 "next": Object {
                                   "attribs": Object {
-                                    "class": "navbar-item",
+                                    "class": "navbar-item contact-link",
                                     "href": "contact",
                                   },
                                   "children": Array [
@@ -17594,7 +17594,7 @@ initialize {
                             },
                             Object {
                               "attribs": Object {
-                                "class": "navbar-item",
+                                "class": "navbar-item about-link",
                                 "href": "/about",
                               },
                               "children": Array [
@@ -17610,7 +17610,7 @@ initialize {
                               "namespace": "http://www.w3.org/1999/xhtml",
                               "next": Object {
                                 "attribs": Object {
-                                  "class": "navbar-item",
+                                  "class": "navbar-item contact-link",
                                   "href": "contact",
                                 },
                                 "children": Array [
@@ -17679,7 +17679,7 @@ initialize {
                             },
                             Object {
                               "attribs": Object {
-                                "class": "navbar-item",
+                                "class": "navbar-item contact-link",
                                 "href": "contact",
                               },
                               "children": Array [
@@ -17697,7 +17697,7 @@ initialize {
                               "parent": [Circular],
                               "prev": Object {
                                 "attribs": Object {
-                                  "class": "navbar-item",
+                                  "class": "navbar-item about-link",
                                   "href": "/about",
                                 },
                                 "children": Array [
@@ -17828,7 +17828,7 @@ initialize {
                             "namespace": "http://www.w3.org/1999/xhtml",
                             "next": Object {
                               "attribs": Object {
-                                "class": "navbar-item",
+                                "class": "navbar-item about-link",
                                 "href": "/about",
                               },
                               "children": Array [
@@ -17844,7 +17844,7 @@ initialize {
                               "namespace": "http://www.w3.org/1999/xhtml",
                               "next": Object {
                                 "attribs": Object {
-                                  "class": "navbar-item",
+                                  "class": "navbar-item contact-link",
                                   "href": "contact",
                                 },
                                 "children": Array [
@@ -17897,7 +17897,7 @@ initialize {
                           },
                           Object {
                             "attribs": Object {
-                              "class": "navbar-item",
+                              "class": "navbar-item about-link",
                               "href": "/about",
                             },
                             "children": Array [
@@ -17913,7 +17913,7 @@ initialize {
                             "namespace": "http://www.w3.org/1999/xhtml",
                             "next": Object {
                               "attribs": Object {
-                                "class": "navbar-item",
+                                "class": "navbar-item contact-link",
                                 "href": "contact",
                               },
                               "children": Array [
@@ -17982,7 +17982,7 @@ initialize {
                           },
                           Object {
                             "attribs": Object {
-                              "class": "navbar-item",
+                              "class": "navbar-item contact-link",
                               "href": "contact",
                             },
                             "children": Array [
@@ -18000,7 +18000,7 @@ initialize {
                             "parent": [Circular],
                             "prev": Object {
                               "attribs": Object {
-                                "class": "navbar-item",
+                                "class": "navbar-item about-link",
                                 "href": "/about",
                               },
                               "children": Array [
