@@ -72,7 +72,3 @@ yarn-error.log
 .netlify
 # stryker temp files
 .stryker-tmp
-
-#cypress files
-cypress/videos/
-cypress/screenshots/
