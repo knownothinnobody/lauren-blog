@@ -30,6 +30,7 @@ jobs:
 
       - name: Restore Cache Cypress
         id: cache-cypress
+        uses: actions/cache@v2
         with:
           path: |
             ./home/runner/.cache/Cypress
