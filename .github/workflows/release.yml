@@ -16,7 +16,8 @@ jobs:
         with:
           path: |
             ./node_modules
-          key: ${{ runner.os }}-${{ hashFiles('./package-lock.json') }}
+            ./home/runner/.cache/Cypress
+          key: v2-${{ runner.os }}-${{ hashFiles('./package-lock.json') }}
 
       - name: Install Dependencies
         if: steps.cache-node-modules.outputs.cache-hit != true
@@ -27,18 +28,6 @@ jobs:
 
       - name: Run Unit Tests
         run: npm run test -- --coverage --ci
-
-      - name: Restore Cache Cypress
-        id: cache-cypress
-        uses: actions/cache@v2
-        with:
-          path: |
-            ./home/runner/.cache/Cypress
-          keys: ${{ runner.os }}-${{ hashFiles('./package-lock.json') }}
-
-      - name: Install Cypress
-        if: steps.cache-cypress.outputs.cache-hit !=true
-        run: npm run cy:install
 
       - name: Run Integration Tests
         run: npm run test:e2e:ci
