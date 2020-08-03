@@ -30,7 +30,7 @@
     "gatsby-source-filesystem": "^2.3.23",
     "gatsby-transformer-remark": "^2.8.27",
     "gatsby-transformer-sharp": "^2.5.12",
-    "netlify-cli": "^2.58.0",
+    "netlify-cli": "^2.59.0",
     "netlify-cms-app": "^2.12.19",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
