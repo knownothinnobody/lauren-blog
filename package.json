@@ -46,7 +46,7 @@
     "@stryker-mutator/javascript-mutator": "^3.3.1",
     "@stryker-mutator/jest-runner": "^3.3.1",
     "@testing-library/cypress": "^6.0.0",
-    "@testing-library/react": "^10.4.7",
+    "@testing-library/react": "^10.4.8",
     "axe-core": "^4.0.0",
     "babel-jest": "^26.2.2",
     "babel-preset-gatsby": "^0.5.4",
