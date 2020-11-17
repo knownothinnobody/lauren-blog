@@ -14,7 +14,7 @@
     "cypress-plugin-snapshots": "^1.4.4",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.5.0",
-    "gatsby-plugin-ackee-tracker": "^1.4.0",
+    "gatsby-plugin-ackee-tracker": "^2.0.1",
     "gatsby-plugin-feed": "^2.7.0",
     "gatsby-plugin-manifest": "^2.6.1",
     "gatsby-plugin-netlify": "^2.5.0",
