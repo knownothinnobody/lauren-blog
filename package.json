@@ -69,7 +69,7 @@
     "jest-enzyme": "^7.1.2",
     "prettier": "2.2.0",
     "react-test-renderer": "^16.14.0",
-    "start-server-and-test": "^1.11.5"
+    "start-server-and-test": "^1.11.6"
   },
   "keywords": [
     "gatsby"
